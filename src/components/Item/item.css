@@ -7,61 +7,57 @@
 
 .item {
   display: flex;
-  width: 320px;
+  width: 290px;
   height: auto;
   flex-direction: column;
-  margin: 15px;
+  margin: 20px;
   border-radius: 10px;
   background-color: var(--itemInfo);
-  padding: 15px;
-
+  padding: 20px;
 }
 
 .item__header h2 {
   color: var(--colorHeading);
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.item__header--price {
+  text-align: right;
+  color: var(--colorHeading);
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .item__header h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
+  margin-top: 5px
 }
 
-.item__header--textAling {
-  text-align: end;
+
+.item__image {
+  border-radius: 100%;
 }
 
 .item__buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
-.item__buttonLeft {
-  display: flex;
-  width: 200px;
-  height: 75px;
+.item__buttons button {
+  width: 86px;
+  height: 28px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: var(--colorHeading);
+  border-radius: 8px;
+  border: none;
+  color: white;
 }
-
-.item__buttonLeft button {
-  font-size: 2rem;
-  border-radius: 15px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-}
-.item__buttonLeft span {
-  font-size: 2rem;
-  background-color: aqua;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  height: 50px;
-  width: 50px;
-  margin: 5px;
-  margin-top: 10px;
-}
-
