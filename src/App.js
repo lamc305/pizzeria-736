@@ -1,10 +1,11 @@
-import Menu from "./Page/Menu/Menu";
-import './app.css'
+import React from "react";
+import "./App.css";
+import Home from "./Page/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <Menu />
+      <Home />
     </div>
   );
 }
