@@ -1,9 +1,9 @@
-
+import React from "react";
 import Menu from "./Page/Menu";
-import './App.css'
+import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Page/Home";
-import Cart from "./Page/Cart";
+import Home from "./Page/Home/index";
+import Cart from "./Page/Cart/index";
 import { ReducerContextProvider } from "./contexto";
 
 function App() {
