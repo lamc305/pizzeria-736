@@ -1,18 +1,21 @@
 
 import Menu from "./Page/Menu";
-import './app.css'
+import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Page/Home";
 import Cart from "./Page/Cart";
+import { ReducerContextProvider } from "./contexto";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <ReducerContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </ReducerContextProvider>
     </BrowserRouter>
   );
 }
