@@ -5,24 +5,34 @@
   --tabsActive: #A0BED9;
 }
 
-.header-menu {
+.header__menu {
   display: flex;
   height: 200px;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 115px;
+  margin-top: 75px;
 }
 
-.header-menu h1 {
-  font-size: 14rem;
+.header__menu h1 {
+  font-size: 9rem;
   color: var(--colorHeading);
+  font-weight: bold;
 }
 
-.header-menu img {
-  height: 100%;
+.header__menu img {
+  height: clamp(50px, 100%, 200px)
 }
 
-.tabs-menu {
+.header__menu a {
+  height: clamp(50px, 100%, 200px);
+  color: var(--colorHeading)
+}
+
+.tabs__cartIcon {
+  color: var(--colorHeading)
+}
+
+.tabs__menu {
   display: flex;
   width: 100%;
   margin: 25px auto;
@@ -37,8 +47,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 80vw;
-  margin: 50px auto
+  width: 90vw;
+  margin: 50px auto;
 }
 
 .producto h2 {
