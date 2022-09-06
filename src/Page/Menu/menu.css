@@ -1,0 +1,46 @@
+:root {
+  --colorHeading: #E74524;
+  --itemInfo: #F3F2F3;
+  --tabsContent: #F3F5FB;
+  --tabsActive: #A0BED9;
+}
+
+.header-menu {
+  display: flex;
+  height: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 115px;
+}
+
+.header-menu h1 {
+  font-size: 14rem;
+  color: var(--colorHeading);
+}
+
+.header-menu img {
+  height: 100%;
+}
+
+.tabs-menu {
+  display: flex;
+  width: 100%;
+  margin: 25px auto;
+  font-size: 3rem;
+  justify-content: space-evenly;
+  background-color: var(--tabsContent);
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+.producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin: 50px auto
+}
+
+.producto h2 {
+  font-size: 2rem;
+}
