@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
+:root {
+  --si: 87px;
+  --s: 60px;
+  --m: 30px;
+}
+
 * {
   font-family: "Jost", sans-serif;
   font-size: 16px;
   margin: 0;
 }
 body {
-  margin-left: 50px;
-  margin-right: 50px;
-  max-width: 1700px;
+  margin-left: var(--m);
+  margin-right: var(--m);
 }
 .hero {
   border-bottom: 2px solid #a4bfdf;
@@ -19,11 +24,11 @@ body {
 }
 
 .hero__img {
-  height: 87px;
+  height: var(--si);
   position: relative;
   right: 0;
   top: 20px;
-  width: 87px;
+  width: var(--si);
 }
 
 .container {
@@ -100,12 +105,15 @@ body {
 }
 
 .container__btn:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
 }
 
 .container__btn:active {
   background: #cf4d33;
   color: #fff;
+}
+
+.joinchat {
 }
 
 @media (max-width: 1220px) {
@@ -117,7 +125,7 @@ body {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1120px) {
   .container {
     align-items: center;
     flex-direction: column-reverse;
