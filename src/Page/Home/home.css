@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 :root {
+  --orange: #e74423;
   --si: 87px;
   --s: 60px;
   --m: 30px;
@@ -55,7 +56,7 @@ body {
   font-weight: 400;
   font-size: 40px;
 
-  color: #e74423;
+  color: var(--orange);
 }
 
 .container__paragraph {
@@ -78,7 +79,7 @@ body {
   height: 155px;
   font-weight: 700;
   font-size: 107px;
-  color: #e74423;
+  color: var(--orange);
 }
 
 .container__paragraph2 {
@@ -94,8 +95,8 @@ body {
   box-sizing: border-box;
   width: 497px;
   font-size: 30px;
-  color: #e74423;
-  border: 1px solid #e74423;
+  color: var(--orange);
+  border: 1px solid var(--orange);
   border-radius: 10px;
   position: relative;
   padding: 20px;
@@ -109,11 +110,34 @@ body {
 }
 
 .container__btn:active {
-  background: #cf4d33;
+  background: var(--orange);
   color: #fff;
 }
 
 .joinchat {
+  position: fixed;
+  z-index: 2;
+  bottom: 8px;
+  right: 8px;
+  height: var(--s);
+  min-width: var(--s);
+  max-width: 95vw;
+  background: var(--orange);
+  color: inherit;
+  border-radius: calc(var(--s) / 2);
+  box-shadow: 1px 6px 24px 0 rgb(7 94 84 / 24%);
+  transition: background-color 0.2s linear;
+}
+
+.joinchat__button {
+  border: none;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0) url(../../assets/whatsapp.svg) 50% no-repeat;
+  background-size: 60%;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 @media (max-width: 1220px) {
