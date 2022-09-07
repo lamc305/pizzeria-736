@@ -1,5 +1,5 @@
 :root {
-  --colorHeading: #E74524;
+  --colorHeading: #E74423;
   --itemInfo: #F3F2F3;
   --tabsContent: #F3F5FB;
   --tabsActive: #A0BED9;
@@ -14,7 +14,7 @@
 }
 
 .header__menu h1 {
-  font-size: 9rem;
+  font-size: 11rem;
   color: var(--colorHeading);
   font-weight: bold;
 }
@@ -36,11 +36,15 @@
   display: flex;
   width: 100%;
   margin: 25px auto;
-  font-size: 3rem;
   justify-content: space-evenly;
   background-color: var(--tabsContent);
   padding-top: 10px;
   padding-bottom: 10px
+}
+
+.tabs__menu div {
+  font-size: 4rem;
+
 }
 
 .producto {

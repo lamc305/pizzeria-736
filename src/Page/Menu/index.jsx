@@ -3,10 +3,12 @@ import { FaCartArrowDown } from 'react-icons/fa';
 import './menu.css'
 import { useContext, useEffect } from 'react';
 import { getItems } from '../../services/getItems';
-import ListOfItems from '../../components/ListOfItems';
+import ListOfBebidas from '../../components/ListOfBebidas';
+import ListOfEmpanadas from '../../components/ListOfEmpanada';
 import { TYPES } from '../../action/actionReducer';
 import { Link } from 'react-router-dom';
 import { ReducerContext } from '../../contexto';
+import ListOfPizza from '../../components/ListOfPizza';
 
 
 function Menu() {
@@ -28,16 +30,16 @@ function Menu() {
         </header>
       </div>
       <div className='tabs__menu'>
-        <div>Pizzas</div>
-        <div>Empanadas</div>
-        <div>Postres</div>
-        <div>Bebidas</div>
+        <div> Pizzas</div>
+        <div><a href='#Empanadas' >Empanadas</a></div>
+        <div><a href='#Postres' >Postres</a></div>
+        <div><a href='#Bebidas' >Bebidas</a></div>
         <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
       </div>
-      <ListOfItems state={state.products.pizzas} />
-      <ListOfItems state={state.products.empanadas} name='Empanadas' />
-      <ListOfItems state={state.products.postres} name='Postres' />
-      <ListOfItems state={state.products.bebidas} name='Bebidas' />
+      <ListOfPizza state={state.products.pizzas} />
+      <ListOfEmpanadas state={state.products.empanadas} name='Empanadas' />
+      <ListOfBebidas state={state.products.postres} name='Postres' />
+      <ListOfBebidas state={state.products.bebidas} name='Bebidas' />
     </>
   )
 }
