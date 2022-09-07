@@ -1,7 +1,7 @@
-import Items from "../Item"
+import CardBebida from "../CardBebida"
 import './listOfItems.css'
 
-function ListOfItems({ state, name }) {
+function ListOfBebidas({ state, name }) {
 
   return (
     <>
@@ -15,7 +15,7 @@ function ListOfItems({ state, name }) {
         }
         <section className='producto'>
           {state.map(({ description, name, id, price }) => (
-            <Items
+            <CardBebida
               description={description}
               id={id}
               key={id}
@@ -29,4 +29,4 @@ function ListOfItems({ state, name }) {
   )
 }
 
-export default ListOfItems
+export default ListOfBebidas
