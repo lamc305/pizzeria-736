@@ -38,8 +38,8 @@ function Menu() {
       </div>
       <ListOfPizza state={state.products.pizzas} />
       <ListOfEmpanadas state={state.products.empanadas} name='Empanadas' />
-      <ListOfBebidas state={state.products.postres} name='Postres' />
       <ListOfBebidas state={state.products.bebidas} name='Bebidas' />
+      <ListOfBebidas state={state.products.postres} name='Postres' />
     </>
   )
 }
