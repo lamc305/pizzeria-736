@@ -9,7 +9,6 @@ function ListOfPizza({ state, name }) {
         {name &&
           <div className="ListOfItems__header">
             <h2 id={name}>{name}</h2>
-            <div></div>
           </div>
         }
         <section className='producto'>

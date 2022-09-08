@@ -30,13 +30,13 @@ function Menu() {
         </header>
       </div>
       <div className='tabs__menu'>
-        <div> Pizzas</div>
-        <div><a href='#Empanadas' >Empanadas</a></div>
-        <div><a href='#Postres' >Postres</a></div>
-        <div><a href='#Bebidas' >Bebidas</a></div>
+        <div><a href='#Pizzas' className='tabs__menu-link'>Pizzas</a></div>
+        <div><a href='#Empanadas' className='tabs__menu-link'>Empanadas</a></div>
+        <div><a href='#Postres' className='tabs__menu-link'>Postres</a></div>
+        <div><a href='#Bebidas' className='tabs__menu-link'>Bebidas</a></div>
         <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
       </div>
-      <ListOfPizza state={state.products.pizzas} />
+      <ListOfPizza state={state.products.pizzas} name="Pizzas"/>
       <ListOfEmpanadas state={state.products.empanadas} name='Empanadas' />
       <ListOfBebidas state={state.products.postres} name='Postres' />
       <ListOfBebidas state={state.products.bebidas} name='Bebidas' />
