@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --colorHeading: #E74423;
   --itemInfo: #F3F2F3;
@@ -25,7 +29,6 @@
 
 .header__menu a {
   height: clamp(50px, 100%, 200px);
-  color: var(--colorHeading)
 }
 
 .tabs__cartIcon {
@@ -39,31 +42,32 @@
   margin: 0 auto 25px;
   justify-content: space-evenly;
   background-color: var(--tabsContent);
-  padding-top: 13px;
-  padding-bottom: auto;
+  padding-top: 12px;
   position: sticky;
   top: 0;
-}
-
-.tabs__menu-link {
   font-size: 4rem;
-  font-weight: 700;
-  color: var(--colorHeading);
-  text-decoration: none;
+  text-align: center;
   cursor: pointer;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
-.tabs__menu-link::selection {
+
+a {
+  text-decoration: none;
+  color: #2B303A;
+}
+
+
+.tabs__menu--active {
   font-size: 4rem;
   font-weight: 700;
   color: var(--colorHeading);
   border-bottom: 5px solid #A0BED9;
 }
 
-#Pizzas {
-  visibility: hidden;
-  position: absolute;
-}
+
+
 
 .producto {
   display: flex;
@@ -76,8 +80,12 @@
   font-size: 2rem;
 }
 
-@media (max-width: 1010px) {
-  .item {
-    width: max-con;
+@media (max-width: 950px) {
+  .header__menu h1 {
+    font-size: 8rem;
+  }
+
+  .header__menu img {
+    height: clamp(50px, 100%, 180px)
   }
 }

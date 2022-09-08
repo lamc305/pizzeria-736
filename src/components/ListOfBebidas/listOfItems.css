@@ -13,7 +13,7 @@
 .ListOfItems__header h2 {
   color: var(--colorHeading);
   font-size: 4rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .ListOfItems__header div {
