@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --colorHeading: #E74423;
   --itemInfo: #F3F2F3;
@@ -24,28 +28,46 @@
 }
 
 .header__menu a {
-  height: clamp(50px, 100%, 170px);
-  color: var(--colorHeading)
+  height: clamp(50px, 100%, 200px);
 }
 
 .tabs__cartIcon {
-  color: var(--colorHeading)
+  color: var(--colorHeading);
+  font-size: 4rem;
 }
 
 .tabs__menu {
   display: flex;
   width: 100%;
-  margin: 25px auto;
+  margin: 0 auto 25px;
   justify-content: space-evenly;
   background-color: var(--tabsContent);
-  padding-top: 10px;
-  padding-bottom: 10px
-}
-
-.tabs__menu div {
+  padding-top: 12px;
+  position: sticky;
+  top: 0;
   font-size: 4rem;
-
+  text-align: center;
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: 400;
 }
+
+
+a {
+  text-decoration: none;
+  color: #2B303A;
+}
+
+
+.tabs__menu--active {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--colorHeading);
+  border-bottom: 5px solid #A0BED9;
+}
+
+
+
 
 .producto {
   display: flex;
@@ -57,4 +79,14 @@
 
 .producto h2 {
   font-size: 2rem;
+}
+
+@media (max-width: 950px) {
+  .header__menu h1 {
+    font-size: 8rem;
+  }
+
+  .header__menu img {
+    height: clamp(50px, 100%, 180px)
+  }
 }
