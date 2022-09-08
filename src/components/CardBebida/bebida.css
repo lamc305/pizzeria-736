@@ -18,7 +18,7 @@
   height: 572px;
   height: auto;
   flex-direction: column;
-  margin: 20px;
+  margin: 30px;
   border-radius: 10px;
   padding: 22px 22px 29px 22px;
 }
@@ -92,6 +92,12 @@
   color: white;
 }
 
+.item__buttons--left:active,
+.item__buttons--right:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transform: translateY(2px)
+}
+
 .item__buttons--center {
   margin: 0 4px 0 4px;
   width: 26px;
@@ -100,10 +106,4 @@
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(164, 191, 223, 0.5);
   border-radius: 10px;
-}
-
-.item__header h2 {
-  text-align: right;
-  display: block;
-  margin-bottom: 7px;
 }

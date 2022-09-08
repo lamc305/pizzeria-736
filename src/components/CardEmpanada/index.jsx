@@ -1,10 +1,9 @@
 import './empanada.css'
-import imageNotFound from '../../assets/image-not-found-icon.svg'
 import { useContext } from 'react'
 import { ReducerContext } from '../../contexto'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
-function CardEmpanada({ description, name, id, price }) {
+function CardEmpanada({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
 
@@ -21,7 +20,7 @@ function CardEmpanada({ description, name, id, price }) {
         </div>
         <h3>{description}</h3>
         <h2 className='item__price'>${price}</h2>
-        <img className='item__image' src={imageNotFound} alt={name} />
+        <img className='item__image' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div>
