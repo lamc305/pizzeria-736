@@ -1,17 +1,22 @@
 import './pizza.css'
-import imageNotFound from '../../assets/image-not-found-icon.svg'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { ReducerContext } from '../../contexto'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
-function CardPizza({ description, name, id, price }) {
+function CardPizza({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
-
+  const [togglePizza, setTogglePizza] = useState(1)
   const addToCart = (id) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: id })
 
   }
+
+
+  const handleClass = (index) => {
+    setTogglePizza(index)
+  }
+
 
   return (
     <div className='item' id={id}>
@@ -21,7 +26,14 @@ function CardPizza({ description, name, id, price }) {
         </div>
         <h3>{description}</h3>
         <h2 className='item__price'>${price}</h2>
-        <img className='item__image' src={imageNotFound} alt={name} />
+        <div>
+          <ul className='item__list'>
+            <li className={togglePizza === 1 ? 'item___list--active' : null} onClick={() => handleClass(1)}>Chica</li>
+            <li className={togglePizza === 2 ? 'item___list--active' : null} onClick={() => handleClass(2)}>Grande</li>
+            <li className={togglePizza === 3 ? 'item___list--active' : null} onClick={() => handleClass(3)}>1/2 Pizza</li>
+          </ul>
+        </div>
+        <img className='item__image' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div>

@@ -1,0 +1,27 @@
+.item__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  border-bottom: 0.5px #A4BFDF solid;
+  margin-top: 17px;
+  color: #2B303A;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+.item__list li {
+  text-align: center;
+  width: 84px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 1.8rem;
+}
+
+.item___list--active {
+  width: 84px;
+  border-bottom: 2.5px #A4BFDF solid;
+  color: #E74423;
+  font-weight: bold;
+}

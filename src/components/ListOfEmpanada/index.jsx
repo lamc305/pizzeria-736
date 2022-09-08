@@ -14,10 +14,11 @@ function ListOfEmpanadas({ state, name }) {
           </div>
         }
         <section className='producto'>
-          {state.map(({ description, name, id, price }) => (
+          {state.map(({ description, name, id, price, img }) => (
             <CardEmpanada
               description={description}
               id={id}
+              img={img}
               key={id}
               name={name}
               price={price}

@@ -61,8 +61,11 @@
 }
 
 .item__image {
-  margin-top: 20pxpx;
+  margin-top: 20px;
   border-radius: 100%;
+  max-width: 370px;
+  width: 100%;
+  min-width: 200px
 }
 
 .item__buttons {
@@ -82,6 +85,7 @@
   border-radius: 10px;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .item__buttons--left {
@@ -92,6 +96,7 @@
   width: 32px;
   font-size: 1.4rem;
   color: white;
+  cursor: pointer;
 }
 
 .item__buttons--center {
@@ -108,4 +113,3 @@
   display: block;
   text-align: right;
 }
-

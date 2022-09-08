@@ -1,10 +1,9 @@
 import './bebida.css'
-import imageNotFound from '../../assets/image-not-found-icon.svg'
 import { useContext } from 'react'
 import { ReducerContext } from '../../contexto'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
-function CardBebida({ description, name, id, price }) {
+function CardBebida({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
 
@@ -21,7 +20,7 @@ function CardBebida({ description, name, id, price }) {
           <h2 >${price}</h2>
         </div>
         <h3>{description}</h3>
-        <img className='item__image' src={imageNotFound} alt={name} />
+        <img className='item__image' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div>
