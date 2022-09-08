@@ -14,18 +14,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
-  width: 370px;
-  height: 572px;
+  min-width: 200px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   flex-direction: column;
   margin: 20px;
+  margin-bottom: 48px;
   border-radius: 10px;
   padding: 22px 22px 29px 22px;
 }
 
 .item__header h2 {
   color: var(--colorHeading);
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: bold;
   margin-bottom: 7px;
   margin-top: 5px;
@@ -63,7 +65,7 @@
 .item__image {
   margin-top: 20px;
   border-radius: 100%;
-  max-width: 370px;
+  max-width: 320px;
   width: 100%;
   min-width: 200px
 }
@@ -78,7 +80,7 @@
 
 .item__buttons--right {
   width: 100px;
-  height: 32px;
+  height: 28px;
   font-size: 2rem;
   font-weight: bold;
   background: var(--colorHeading);
@@ -92,8 +94,8 @@
   background-color: var(--buttonsLeft);
   border: 1px solid #A4BFDF;
   border-radius: 10px;
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   font-size: 1.4rem;
   color: white;
   cursor: pointer;
@@ -101,9 +103,9 @@
 
 .item__buttons--center {
   margin: 0 4px 0 4px;
-  width: 26px;
+  width: 25px;
   font-size: 1.8rem;
-  height: 32px;
+  height: 28px;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(164, 191, 223, 0.5);
   border-radius: 10px;
