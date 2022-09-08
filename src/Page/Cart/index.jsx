@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { ReducerContext } from "../../contexto"
 import './cart.css'
+import Form from "../../components/FormEnvio/form"
 
 function Cart() {
 
@@ -17,6 +18,8 @@ function Cart() {
           </div>
         ))}
       </div>
+
+      <Form></Form>
     </>
   )
 }
