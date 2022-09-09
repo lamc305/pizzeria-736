@@ -7,7 +7,7 @@ function form() {
         <h2 className="form__title">¿A donde llevamos el pedido?</h2>
         <input
           type="text"
-          className="form__input form__input--long"
+          className="form__input--long"
           placeholder="Calle"
         />
         <input type="text" className="form__input" placeholder="Numero" />
@@ -23,8 +23,11 @@ function form() {
           className="form__input form__input--separate"
           placeholder="Departamento"
         />
+        <div className="container__texto">
         <h3 className="form__title2">¿Algo que debamos saber?</h3>
         <textarea className="form__texto"></textarea>
+        </div>
+        
       </form>
       <div className="container__orderComplete">
         <div className="container__subTotal">

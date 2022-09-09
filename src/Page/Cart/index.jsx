@@ -3,6 +3,7 @@ import ListOfItemsInCart from "../../components/ListOfItemsInCart"
 import { ReducerContext } from "../../contexto"
 import './cart.css'
 import Form from "../../components/FormEnvio/form"
+import home from '../Home/index'
 import logo from '../../assets/logo.jpg'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
@@ -22,8 +23,8 @@ function Cart() {
           <img className="cart__headerLogo" src={logo} alt='logo' />
         </Link>
       </div>
-<ListOfItemsInCart cart={cart} />
-<Form />
+  <ListOfItemsInCart cart={cart} />
+  <Form />
     </motion.div>
 
   )
