@@ -7,9 +7,8 @@ function CardEmpanada({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
 
-  const addToCart = (id) => {
-    dispatch({ type: TYPES.ADD_TO_CART, payload: id })
-
+  const addToCart = (id, name, price, img, description) => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: { id, name, price, img, description } })
   }
 
   return (
@@ -28,7 +27,7 @@ function CardEmpanada({ description, name, id, price, img }) {
           <button className='item__buttons--center'>0</button>
           <button className='item__buttons--left'><HiPlus /></button>
         </div>
-        <button className='item__buttons--right' onClick={() => addToCart(id)}>Pedir</button>
+        <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
       </div>
     </div>
   )
