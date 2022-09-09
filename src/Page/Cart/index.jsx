@@ -1,26 +1,31 @@
 import { useContext } from "react"
+import ListOfItemsInCart from "../../components/ListOfItemsInCart"
 import { ReducerContext } from "../../contexto"
 import './cart.css'
 import Form from "../../components/FormEnvio/form"
+import logo from '../../assets/logo.jpg'
+import { Link } from "react-router-dom"
+import { motion } from 'framer-motion'
 
 function Cart() {
 
   const { state } = useContext(ReducerContext)
-
+  const { cart } = state
   return (
-    <>
-      <div>
-        {state.cart.map(({name, id, description, price, quantity}) => (
-          <div className='items__cart'>
-            <h2>{name}</h2>
-            <h3>{description}</h3>
-            <h4>${price} x {quantity} = ${price * quantity}</h4>
-          </div>
-        ))}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className='cart__header'>
+        <Link to='/'>
+          <img className="cart__headerLogo" src={logo} alt='logo' />
+        </Link>
       </div>
+<ListOfItemsInCart cart={cart} />
+<Form />
+    </motion.div>
 
-      <Form></Form>
-    </>
   )
 }
 
