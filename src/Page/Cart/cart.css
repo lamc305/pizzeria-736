@@ -1,3 +1,18 @@
-.items__cart{
+.items__cart {
   font-size: 4rem
+}
+
+.cart__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 45px;
+  width: 100%;
+  max-width: 90vw;
+  margin: 30px auto 0 auto;
+}
+
+.cart__headerLogo {
+  width: 100%;
+  max-width: 87px;
+  object-fit: contain;
 }

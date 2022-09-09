@@ -10,7 +10,7 @@ import { TYPES } from '../../action/actionReducer';
 import { Link } from 'react-router-dom';
 import { ReducerContext } from '../../contexto';
 import ListOfPizza from '../../components/ListOfPizza';
-
+import { motion } from 'framer-motion'
 
 function Menu() {
 
@@ -21,12 +21,16 @@ function Menu() {
     Promise.all(getItems).then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
   }, [dispatch])
 
-  const handleClas = (index) => {
+  const handleClass = (index) => {
     setToggleList(index)
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div>
         <header className='header__menu'>
           <h1>Don Remolo</h1>
@@ -36,18 +40,18 @@ function Menu() {
         </header>
       </div>
       <div className='tabs__menu'>
-        <div><a href='#' className={toggleList === "#" ? 'tabs__menu--active' : null} onClick={() => handleClas("#")}>Pizzas</a></div>
-        <div><a href='#Empanadas' className={toggleList === '#Empanadas' ? 'tabs__menu--active' : null} onClick={() => handleClas('#Empanadas')}>Empanadas</a></div>
-        <div><a href='#Postres' className={toggleList === '#Postres' ? 'tabs__menu--active' : null} onClick={() => handleClas('#Postres')}>Postres</a></div>
-        <div><a href='#Bebidas' className={toggleList === '#Bebidas' ? 'tabs__menu--active' : null} onClick={() => handleClas('#Bebidas')}>Bebidas</a></div>
+        <div><a href='#' className={toggleList === "#" ? 'tabs__menu--active' : null} onClick={() => handleClass("#")}>Pizzas</a></div>
+        <div><a href='#Empanadas' className={toggleList === '#Empanadas' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Empanadas')}>Empanadas</a></div>
+        <div><a href='#Postres' className={toggleList === '#Postres' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Postres')}>Postres</a></div>
+        <div><a href='#Bebidas' className={toggleList === '#Bebidas' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
         <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
       </div>
 
-      <ListOfPizza state={state.products.pizzas} name="Pizzas"/>
+      <ListOfPizza state={state.products.pizzas} name="Pizzas" />
       <ListOfEmpanadas state={state.products.empanadas} name='Empanadas' />
       <ListOfBebidas state={state.products.bebidas} name='Bebidas' />
       <ListOfBebidas state={state.products.postres} name='Postres' />
-    </>
+    </motion.div>
   )
 }
 
