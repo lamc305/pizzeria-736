@@ -1,0 +1,368 @@
+:root {
+    --orange: #e74423
+}
+
+.container__form {
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 393px;
+}
+
+.form__title {
+    position: relative;
+    width: 393px;
+    height: 43px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    color: var(--orange);
+}
+
+.form__input {
+    padding-top: 12px;
+    border: none;
+    border-bottom: 2px solid #A4BFDF;
+    width: 70%;
+    font-weight: 400;
+    font-size: 14px;
+    outline: none;
+}
+
+.form__input::placeholder {
+    font-style: normal;
+    color: #2B303A;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.form__input--long {
+    padding-top: 12px;
+    border: none;
+    border-bottom: 2px solid #A4BFDF;
+    width: 536px;
+    font-weight: 400;
+    font-size: 14px;
+    outline: none;
+}
+
+.form__input--long::placeholder {
+    font-style: normal;
+    color: #2B303A;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.form__input--separate {
+    position: relative;
+    width: 44%;
+    bottom: 93px;
+    left: 365px;
+}
+
+.form__title2 {
+    background: #fff;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2B303A;
+    position: relative;
+    top: 8px;
+    left: 12px;
+    width: fit-content;
+}
+
+.form__texto {
+    outline: #9dbbdf;
+    resize: none;
+    box-sizing: border-box;
+    width: 598px;
+    height: 65px;
+    border: 1px solid #A4BFDF;
+    border-radius: 10px;
+}
+
+.container__orderComplete {
+    font-size: 16px;
+    color: #2B303A;
+    position: relative;
+    right: 8vw;
+}
+
+.container__subTotal {
+    display: grid;
+    gap: 8px;
+    border-bottom: 2px solid #9dbbdf;
+    width: 84%;
+    padding-bottom: 25px;
+}
+
+.text__order {
+    grid-column: 1/2;
+    padding: 10px;
+}
+
+.text__price {
+    position: relative;
+    right: 100px;
+    grid-column: 2/3;
+    padding: 10px;
+}
+
+.container__subTotal input {
+    box-sizing: border-box;
+    width: 400px;
+    height: 40px;
+    border: 1px solid rgba(164, 191, 223, 0.5);
+    border-radius: 10px;
+    outline: none;
+}
+
+.container__subTotal input::placeholder {
+    padding-left: 10px;
+    color: #6290C8;
+}
+
+.container__Total {
+    display: grid;
+    gap: 8px;
+    width: 84%;
+    padding-bottom: 25px;
+}
+
+.text__modified {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    grid-column: 1/2;
+    padding: 15px;
+}
+
+.text__price2 {
+    position: relative;
+    left: 220px;
+    grid-column: 2/3;
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--orange);
+}
+
+.btn__order {
+    grid-column: 1/4;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    border: 1px solid #E74423;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 43px;
+    background: transparent;
+    color: #E74423;
+    cursor: pointer;
+}
+
+.paragraph {
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.text__modified2 {
+    grid-column: 1/4;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--orange);
+}
+
+@media (max-width: 1360px) {
+    .form__input--long {
+        width: 404px;
+    }
+
+    .form__input {
+        width: fit-content;
+    }
+
+    .form__input--separate {
+        left: 268px;
+        bottom: 105px;
+    }
+
+    .form__texto {
+        width: 430px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .container__orderComplete {
+        left: 4vw;
+    }
+}
+
+@media (max-width: 961px) {
+    .container__form {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .form {
+        width: max-content;
+    }
+
+    .form__texto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .form__title {
+        font-size: 25px;
+    }
+
+    .form__input {
+        font-size: 12px;
+    }
+
+    .form__input--long {
+        width: 370px;
+    }
+
+    .form__input--separate {
+        left: 254px;
+        bottom: 99px;
+    }
+
+    .container__texto {
+        width: 100%;
+        position: relative;
+        bottom: 52px;
+    }
+
+
+    .form__title2 {
+        font-size: 12px;
+    }
+
+    .form__texto {
+        height: 60px;
+    }
+
+    .container__orderComplete {
+        left: 7vw;
+        bottom: 52px;
+    }
+
+    .container__orderComplete input {
+        width: 390px;
+    }
+
+    .container__subTotal {
+        font-size: 15px;
+    }
+
+    .text__modified,
+    .text__price2,
+    .text__modified2 {
+        font-size: 18px;
+    }
+
+    .btn__order {
+        font-size: 25px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 445px) and (min-width: 240px) {
+    .container__form {
+        width: 80vw;
+    }
+
+    .form {
+        align-items: center;
+    }
+
+    .form__title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .form__input--long {
+        left: 50px;
+        width: 70%;
+    }
+
+    .form__input {
+        width: 70%;
+    }
+
+    .form__input--separate {
+        position: static;
+    }
+
+    .container__texto {
+        padding-top: 20px;
+        position: static;
+        width: 230px;
+    }
+
+    .form__title2 {
+        font-size: 10px;
+    }
+
+    .form__texto {
+        height: max-content;
+    }
+
+    .container__orderComplete {
+        position: static;
+    }
+
+    .container__subTotal {
+        position: relative;
+        left: 25px;
+    }
+
+    .container__orderComplete input {
+        width: 65vw;
+        position: relative;
+    }
+
+    .container__Total {
+        width: 100%;
+    }
+
+    .text__modified,
+    .text__price2,
+    .text__modified2 {
+        font-size: 15px;
+    }
+
+    .text__price2 {
+        left: 120px;
+    }
+
+    .btn__order {
+        height: max-content;
+    }
+}
