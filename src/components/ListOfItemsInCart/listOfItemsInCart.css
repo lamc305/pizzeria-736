@@ -17,7 +17,7 @@
 }
 
 .itemOfCart__button:active {
-  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(2px)
 }
 
@@ -25,9 +25,14 @@
   position: relative;
   width: 90vw;
   margin: 0 auto;
-  height: 100%;
-  height: auto;
-  min-height: 400px;
+  min-height: 218px;
   border-top: 2px #A4BFDF solid;
   border-bottom: 2px #A4BFDF solid;
+  margin-bottom: 5px;
+}
+
+.itemsOfCart__empty {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 60px;
 }

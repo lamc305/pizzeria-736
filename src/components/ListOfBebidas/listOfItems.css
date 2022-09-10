@@ -22,3 +22,9 @@
   height: 1px;
   background-color: var(--tabsActive);
 }
+
+@media screen and (max-width: 460px) {
+  .ListOfItems__header h2 {
+    font-size: 3rem;
+  }
+}
