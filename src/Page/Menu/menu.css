@@ -67,8 +67,6 @@ a {
 }
 
 
-
-
 .producto {
   display: flex;
   flex-wrap: wrap;
@@ -81,12 +79,83 @@ a {
   font-size: 2rem;
 }
 
-@media (max-width: 950px) {
+@media screen and (max-width: 950px) {
   .header__menu h1 {
     font-size: 8rem;
   }
 
   .header__menu img {
     height: clamp(50px, 100%, 180px)
+  }
+
+  .tabs__menu {
+    font-size: 3rem;
+  }
+
+  .tabs__cartIcon {
+    font-size: 3rem;
+  }
+
+  .tabs__menu--active {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header__menu h1 {
+    font-size: 5rem;
+  }
+
+  .header__menu img {
+    height: clamp(50px, 100%, 130px)
+  }
+
+  .tabs__menu {
+    font-size: 2rem;
+  }
+
+  .tabs__cartIcon {
+    font-size: 2rem;
+  }
+
+  .tabs__menu--active {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .tabs__menu {
+    font-size: 1.5rem;
+  }
+
+  .tabs__menu--active {
+    font-size: 1.5rem;
+  }
+
+  .tabs__cartIcon {
+    font-size: 1.5rem;
+  }
+
+  .header__menu h1 {
+    font-size: 4rem;
+  }
+
+}
+
+@media screen and (max-widht: 360px) {
+  .tabs__menu {
+    font-size: 1.5rem;
+  }
+
+  .tabs__menu--active {
+    font-size: 1.5rem;
+  }
+
+  .tabs__cartIcon {
+    font-size: 1.5rem;
+  }
+
+  .header__menu h1 {
+    font-size: 4rem;
   }
 }
