@@ -3,7 +3,6 @@ import ListOfItemsInCart from "../../components/ListOfItemsInCart"
 import { ReducerContext } from "../../contexto"
 import './cart.css'
 import Form from "../../components/FormEnvio/form"
-import home from '../Home/index'
 import logo from '../../assets/logo.jpg'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
