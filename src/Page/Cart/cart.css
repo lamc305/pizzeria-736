@@ -1,7 +1,3 @@
-.items__cart {
-  font-size: 4rem
-}
-
 .cart__header {
   display: flex;
   justify-content: flex-end;
