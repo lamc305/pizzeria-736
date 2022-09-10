@@ -35,7 +35,7 @@ function CardPizza({ description, name, id, price, img }) {
         <img className='item__image' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
-        <div>
+        <div className='items___buttonsLeft'>
           <button className='item__buttons--left'><HiMinus /></button>
           <button className='item__buttons--center'>0</button>
           <button className='item__buttons--left'><HiPlus /></button>

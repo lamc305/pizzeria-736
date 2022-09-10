@@ -1,4 +1,4 @@
-import './empanada.css'
+import './stylesOfCards.css'
 import { useContext } from 'react'
 import { ReducerContext } from '../../contexto'
 import { TYPES } from '../../action/actionReducer'
@@ -22,10 +22,10 @@ function CardEmpanada({ description, name, id, price, img }) {
         <img className='item__image' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
-        <div>
-          <button className='item__buttons--left'><HiMinus /></button>
-          <button className='item__buttons--center'>0</button>
-          <button className='item__buttons--left'><HiPlus /></button>
+        <div className='items___buttonsLeft'>
+            <button className='item__buttons--left'><HiMinus /></button>
+            <button className='item__buttons--center'>0</button>
+            <button className='item__buttons--left'><HiPlus /></button>
         </div>
         <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
       </div>

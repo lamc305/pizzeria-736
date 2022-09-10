@@ -24,11 +24,8 @@ html {
 }
 
 .header__menu img {
-  height: clamp(50px, 100%, 180px)
-}
-
-.header__menu a {
-  height: clamp(50px, 100%, 200px);
+  max-width: 175px;
+  object-fit: contain;
 }
 
 .tabs__cartIcon {
@@ -52,12 +49,10 @@ html {
   font-weight: 400;
 }
 
-
 a {
   text-decoration: none;
   color: #2B303A;
 }
-
 
 .tabs__menu--active {
   font-size: 4rem;
@@ -75,17 +70,18 @@ a {
   margin: 30px auto;
 }
 
-.producto h2 {
-  font-size: 2rem;
-}
-
 @media screen and (max-width: 950px) {
+
+  .header__menu {
+    height: 160px;
+    margin-top: 50px;
+  }
   .header__menu h1 {
     font-size: 8rem;
   }
 
   .header__menu img {
-    height: clamp(50px, 100%, 180px)
+    max-width: 140px;
   }
 
   .tabs__menu {
@@ -102,12 +98,17 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+
+  .header__menu {
+    height: 150px;
+    margin-top: 40px;
+  }
   .header__menu h1 {
     font-size: 5rem;
   }
 
   .header__menu img {
-    height: clamp(50px, 100%, 130px)
+    max-width: 125px;
   }
 
   .tabs__menu {
@@ -124,6 +125,11 @@ a {
 }
 
 @media screen and (max-width: 425px) {
+  .header__menu {
+    height: 120px;
+    margin-top: 30px;
+  }
+
   .tabs__menu {
     font-size: 1.5rem;
   }
@@ -138,11 +144,19 @@ a {
 
   .header__menu h1 {
     font-size: 4rem;
+  }
+
+  .header__menu img {
+    max-width: 100px;
   }
 
 }
 
 @media screen and (max-widht: 360px) {
+  .header__menu {
+    height: 100px;
+    margin-top: 25px;
+  }
   .tabs__menu {
     font-size: 1.5rem;
   }
@@ -157,5 +171,35 @@ a {
 
   .header__menu h1 {
     font-size: 4rem;
+  }
+  .header__menu img {
+    max-width: 80px;
+  }
+
+}
+
+@media screen and (max-width:320px) {
+  .header__menu {
+    height: 70px;
+    margin-top: 10px;
+  }
+
+  .tabs__menu {
+    font-size: 1rem;
+  }
+
+  .tabs__menu--active {
+    font-size: 1rem;
+  }
+
+  .tabs__cartIcon {
+    font-size: 1rem;
+  }
+
+  .header__menu h1 {
+    font-size: 2.5rem;
+  }
+  .header__menu img {
+    max-width: 60px;
   }
 }

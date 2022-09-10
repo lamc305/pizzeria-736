@@ -10,11 +10,6 @@
   margin: 0;
 }
 
-body {
-  margin-left: var(--m);
-  margin-right: var(--m);
-}
-
 .hero {
   border-bottom: 2px solid #a4bfdf;
   display: flex;
