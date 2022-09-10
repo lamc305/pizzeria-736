@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import Pizza from "../../assets/Pizza.png";
+import ButtonWhatsapp from "../../components/ButtonWhatsapp";
 import "./home.css";
 import { motion } from 'framer-motion'
 function Home() {
@@ -39,10 +40,7 @@ function Home() {
         </div>
       </section>
 
-      <div className="joinchat">
-        <a href="https://wa.me/5124234234234234?text=Hola,%20estoy%20interesado%20el%20produc
-          to,%20quisiera%20una%20porción" target="_blank" rel="noopener noreferrer"><button className="joinchat__button"></button></a>
-      </div>
+      <ButtonWhatsapp />
     </motion.div>
   );
 }

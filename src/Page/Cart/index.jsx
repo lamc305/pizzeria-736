@@ -4,6 +4,7 @@ import { ReducerContext } from "../../contexto"
 import './cart.css'
 import Form from "../../components/FormEnvio/form"
 import logo from '../../assets/logo.jpg'
+import ButtonWhatsapp from "../../components/ButtonWhatsapp"
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
 
@@ -24,6 +25,7 @@ function Cart() {
       </div>
   <ListOfItemsInCart cart={cart} />
   <Form />
+  <ButtonWhatsapp />
     </motion.div>
 
   )
