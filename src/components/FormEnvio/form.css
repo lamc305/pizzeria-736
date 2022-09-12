@@ -14,7 +14,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: 393px;
 }
 
 .form__title {
@@ -207,8 +207,6 @@
     }
 }
 
-
-
 @media (max-width: 1040px) {
 
 
@@ -279,6 +277,10 @@
         height: 60px;
     }
 
+    .container__orderComplete {
+        bottom: 45px;
+    }
+
     .container__orderComplete input {
         width: 100%;
     }
@@ -305,7 +307,9 @@
 }
 
 @media (max-width: 445px) {
-
+    .container__form {
+        width: 80vw;
+    }
 
     .form {
         align-items: center;
@@ -351,6 +355,10 @@
 
     .container__subTotal {
         font-size: 13px;
+    }
+
+    .container__orderComplete input {
+        width: 100%;
     }
 
     .text__modified,
