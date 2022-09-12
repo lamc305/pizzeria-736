@@ -1,6 +1,6 @@
 import './pizza.css'
 import { useContext, useState } from 'react'
-import { ReducerContext } from '../../contexto'
+import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
 function CardPizza({ description, name, id, price, img }) {
@@ -16,6 +16,9 @@ function CardPizza({ description, name, id, price, img }) {
     setTogglePizza(index)
   }
 
+  const classNameActive1 = togglePizza === 1 ? 'item___list--active' : null
+  const classNameActive2 = togglePizza === 2 ? 'item___list--active' : null
+  const classNameActive3 = togglePizza === 3 ? 'item___list--active' : null
 
   return (
     <div className='item' id={id}>
@@ -27,12 +30,12 @@ function CardPizza({ description, name, id, price, img }) {
         <h2 className='item__price'>${price}</h2>
         <div>
           <ul className='item__list'>
-            <li className={togglePizza === 1 ? 'item___list--active' : null} onClick={() => handleClass(1)}>Chica</li>
-            <li className={togglePizza === 2 ? 'item___list--active' : null} onClick={() => handleClass(2)}>Grande</li>
-            <li className={togglePizza === 3 ? 'item___list--active' : null} onClick={() => handleClass(3)}>1/2 Pizza</li>
+            <li className={classNameActive1} onClick={() => handleClass(1)}>Chica</li>
+            <li className={classNameActive2} onClick={() => handleClass(2)}>Grande</li>
+            <li className={classNameActive3} onClick={() => handleClass(3)}>1/2 Pizza</li>
           </ul>
         </div>
-        <img className='item__image' src={img} alt={name} />
+        <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div className='items___buttonsLeft'>

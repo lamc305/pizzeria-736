@@ -1,6 +1,6 @@
 import './stylesOfCards.css'
 import { useContext } from 'react'
-import { ReducerContext } from '../../contexto'
+import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
 function CardEmpanada({ description, name, id, price, img }) {
@@ -19,7 +19,7 @@ function CardEmpanada({ description, name, id, price, img }) {
         </div>
         <h3>{description}</h3>
         <h2 className='item__price'>${price}</h2>
-        <img className='item__image' src={img} alt={name} />
+        <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div className='items___buttonsLeft'>

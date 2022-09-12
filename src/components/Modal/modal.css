@@ -1,0 +1,42 @@
+.modal {
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+}
+
+.is_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  width: 60vw;
+  min-height: 40vh;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.modal__container p {
+  font-family: 'Jost';
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 51px;
+  color: #E74423;
+}
+
+.modal__logo {
+  width: 15vw;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: space-around;
+}

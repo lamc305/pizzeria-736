@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { ReducerContext } from '../../contexto'
+import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
 function CardBebida({ description, name, id, price, img }) {
@@ -18,7 +18,7 @@ function CardBebida({ description, name, id, price, img }) {
           <h2>${price}</h2>
         </div>
         <h3>{description}</h3>
-        <img className='item__image' src={img} alt={name} />
+        <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <div className='items___buttonsLeft'>

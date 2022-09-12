@@ -36,3 +36,9 @@
   text-align: center;
   margin-top: 60px;
 }
+
+@media screen and (max-width: 960px) {
+  .itemsOfCart__container {
+    min-height: 100px;
+  }
+}
