@@ -12,6 +12,7 @@ function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ delay: 0, duration: 1 }}
+      className='container__home'
     >
       <header className="hero">
         <img src={logo} alt="Logo Pizzeria Don Remolo" className="hero__img" />
