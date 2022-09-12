@@ -8,7 +8,7 @@ import ListOfBebidas from '../../components/ListOfBebidas';
 import ListOfEmpanadas from '../../components/ListOfEmpanada';
 import { TYPES } from '../../action/actionReducer';
 import { Link } from 'react-router-dom';
-import { ReducerContext } from '../../contexto';
+import { ReducerContext } from '../../contexto/reducerContext';
 import ListOfPizza from '../../components/ListOfPizza';
 import { motion } from 'framer-motion'
 
@@ -25,11 +25,18 @@ function Menu() {
     setToggleList(index)
   }
 
+  const toggleClass1 = toggleList === '#Empanadas' ? 'tabs__menu--active' : null
+  const toggleClass2 = toggleList === '#Postres' ? 'tabs__menu--active' : null
+  const toggleClass3 = toggleList === '#Bebidas' ? 'tabs__menu--active' : null
+  const toggleClass4 = toggleList === '#' ? 'tabs__menu--active' : null
+
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      transition={{ delay: 0, duration: 1 }}
     >
       <div>
         <header className='header__menu'>
@@ -40,10 +47,10 @@ function Menu() {
         </header>
       </div>
       <div className='tabs__menu'>
-        <div><a href='#' className={toggleList === "#" ? 'tabs__menu--active' : null} onClick={() => handleClass("#")}>Pizzas</a></div>
-        <div><a href='#Empanadas' className={toggleList === '#Empanadas' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Empanadas')}>Empanadas</a></div>
-        <div><a href='#Postres' className={toggleList === '#Postres' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Postres')}>Postres</a></div>
-        <div><a href='#Bebidas' className={toggleList === '#Bebidas' ? 'tabs__menu--active' : null} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
+        <div><a href='#' className={toggleClass4} onClick={() => handleClass("#")}>Pizzas</a></div>
+        <div><a href='#Empanadas' className={toggleClass1} onClick={() => handleClass('#Empanadas')}>Empanadas</a></div>
+        <div><a href='#Postres' className={toggleClass2} onClick={() => handleClass('#Postres')}>Postres</a></div>
+        <div><a href='#Bebidas' className={toggleClass3} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
         <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
       </div>
 
