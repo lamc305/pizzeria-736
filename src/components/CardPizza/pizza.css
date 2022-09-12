@@ -25,3 +25,10 @@
   color: #E74423;
   font-weight: bold;
 }
+
+@media screen and (max-width: 425px) {
+  .item__list li {
+    width: 60px;
+    font-size: 1.4rem;
+}
+}

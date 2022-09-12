@@ -6,7 +6,7 @@ function ItemsOfCart({ name, price, description, img }) {
   return (
     <div className='itemsOfCart__product' >
       <div className='itemsOfCart__image' >
-        <img src={img} alt="product" />
+        <img src={img} loading='lazy' alt="product" />
       </div>
       <div className='itemsOfCart__text'>
         <div>
@@ -14,7 +14,7 @@ function ItemsOfCart({ name, price, description, img }) {
           <p>{description}</p>
         </div>
         <div className='items__buttonsCart'>
-          <div>
+          <div className='items___buttonsLeft'>
             <button className='item__buttons--left'><HiMinus /></button>
             <button className='item__buttons--center'>0</button>
             <button className='item__buttons--left'><HiPlus /></button>

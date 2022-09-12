@@ -1,6 +1,16 @@
+import { useContext } from "react";
+import { ModalContexto } from "../../contexto/modalContext";
 import "./form.css";
 
-function form() {
+function Form() {
+
+  const data = useContext(ModalContexto)
+  const { setIsOpen } = data
+
+  const handleState = () => {
+    setIsOpen('is_open')
+  }
+
   return (
     <section className="container__form">
       <form className="form">
@@ -24,10 +34,10 @@ function form() {
           placeholder="Departamento"
         />
         <div className="container__texto">
-        <h3 className="form__title2">¿Algo que debamos saber?</h3>
-        <textarea className="form__texto"></textarea>
+          <h3 className="form__title2">¿Algo que debamos saber?</h3>
+          <textarea className="form__texto"></textarea>
         </div>
-        
+
       </form>
       <div className="container__orderComplete">
         <div className="container__subTotal">
@@ -39,7 +49,7 @@ function form() {
         <div className="container__Total">
           <p className="text__modified">Total</p>
           <p className="text__price2">$1630</p>
-          <button className="btn__order">Concreta tu pedido</button>
+          <button className="btn__order" onClick={handleState}>Concreta tu pedido</button>
           <p className="paragraph">Al concretar tu pedido te llegara el contacto al whatsapp.</p>
           <p className="text__modified2">¡Gracias!</p>
         </div>
@@ -48,4 +58,4 @@ function form() {
   );
 }
 
-export default form;
+export default Form;

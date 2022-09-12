@@ -1,3 +1,8 @@
+:root {
+    --orange: #e74423;
+    --s: 60px;
+}
+
 .joinchat {
     position: fixed;
     z-index: 2;

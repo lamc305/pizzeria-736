@@ -6,7 +6,6 @@
   --buttonsLeft: #A4BFDF;
 }
 
-
 .item {
   display: flex;
   background-image: url('../../assets/Rectangle_10.png');
@@ -35,16 +34,6 @@
   display: block;
 }
 
-.item__header--price {
-  text-align: right;
-  color: var(--colorHeading);
-  font-size: 3rem !important;
-  font-weight: bold;
-  display: inline;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
 .item__header h3 {
   font-size: 1.4rem;
   font-family: Roboto;
@@ -66,8 +55,9 @@
   margin-top: 20px;
   border-radius: 100%;
   max-width: 320px;
+  margin: 0 auto;
   width: 100%;
-  min-width: 200px
+  object-fit: contain;
 }
 
 .item__buttons {
@@ -88,6 +78,9 @@
   border: none;
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item__buttons--left {
@@ -99,6 +92,14 @@
   font-size: 1.4rem;
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items___buttonsLeft{
+  display: flex;
+  align-items: center;
 }
 
 .item__buttons--center {
@@ -112,6 +113,54 @@
 }
 
 .item__price {
-  display: block;
   text-align: right;
+}
+
+.item__buttons--left:active,
+.item__buttons--right:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  transform: translateY(2px)
+}
+
+@media screen and (max-width:425px) {
+  .item__header h2 {
+    font-size: 2rem;
+  }
+
+  .item__header h3 {
+    font-size: 1.3rem;
+  }
+
+  .item__image {
+    max-width: 250px;
+    width: 100%;
+    min-width: 200px;
+  }
+
+  .item {
+    min-width: 200px;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px;
+    margin-bottom: 48px;
+  }
+
+  .item__buttons--right {
+    width: 81px;
+    height: 23px;
+    font-size: 1.5rem;
+  }
+
+  .item__buttons--left {
+    height: 23px;
+    width: 23px;
+    font-size: 1.2rem;
+  }
+
+  .item__buttons--center {
+    width: 22px;
+    font-size: 1.2rem;
+    height: 22px;
+  }
+
 }
