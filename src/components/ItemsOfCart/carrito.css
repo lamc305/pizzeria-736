@@ -215,6 +215,7 @@
     border-radius: 100%;
     min-width: 85px;
     margin-right: 7px;
+    max-width: 175px;
   }
 }
 

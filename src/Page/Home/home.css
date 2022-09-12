@@ -9,6 +9,10 @@
   font-family: "Jost", sans-serif;
   margin: 0;
 }
+.container__home {
+  width: 85vw;
+  margin: 0 auto;
+}
 
 .hero {
   border-bottom: 2px solid #a4bfdf;
@@ -92,6 +96,7 @@
 .btn {
   box-sizing: border-box;
   width: 497px;
+  height: 80px;
   cursor: pointer;
   background: transparent;
   padding: 20px;
