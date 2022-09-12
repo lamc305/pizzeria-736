@@ -8,8 +8,9 @@
   font-family: "Jost", sans-serif;
   margin: 0;
 }
+
 .container__home {
-  width: 85vw;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -130,6 +131,7 @@
 
   .btn {
     left: 0;
+    bottom: 55px;
   }
 }
 
