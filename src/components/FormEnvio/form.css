@@ -372,6 +372,7 @@
     }
 
     .btn__order {
+        width: 100%;
         font-size: 18px;
         height: max-content;
         width: 330px;
