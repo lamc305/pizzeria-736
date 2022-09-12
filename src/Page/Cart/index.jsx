@@ -2,7 +2,7 @@ import { useContext } from "react"
 import ListOfItemsInCart from "../../components/ListOfItemsInCart"
 import { ReducerContext } from "../../contexto/reducerContext"
 import './cart.css'
-import Form from '../../components/FormEnvio/Form'
+import Form from '../../components/FormEnvio'
 import logo from '../../assets/logo.jpg'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
