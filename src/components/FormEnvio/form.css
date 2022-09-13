@@ -63,13 +63,14 @@
 
 .form__input--separate {
     position: relative;
-    bottom: 114px;
+    bottom: 126px;
     left: 350px;
 }
 
 .container__texto {
     position: relative;
     bottom: 80px;
+    width: 600px;
 }
 
 .form__title2 {
@@ -81,7 +82,7 @@
     line-height: 17px;
     color: #2B303A;
     position: relative;
-    top: 20px;
+    top: 8px;
     left: 12px;
     width: fit-content;
 }
@@ -140,6 +141,7 @@
     font-weight: 700;
     font-size: 20px;
     text-align: center;
+    padding: 10px;
 }
 
 .text__price2 {
@@ -149,6 +151,7 @@
     font-weight: 700;
     font-size: 20px;
     color: var(--orange);
+    padding: 10px;
 }
 
 .btn__order {
@@ -194,12 +197,11 @@
     }
 
     .form__input {
-        width: fit-content;
+        width: 42%;
     }
 
     .form__input--separate {
         left: 255px;
-        bottom: 114pxpx;
     }
 
     .form__texto {
@@ -220,6 +222,10 @@
 
     .form__input--separate {
         left: 200px;
+    }
+
+    .container__texto {
+        width: 100%;
     }
 
     .form__texto {
@@ -259,7 +265,7 @@
     }
 
     .form__input--separate {
-        bottom: 108px;
+        bottom: 118px;
     }
 
     .container__texto {
