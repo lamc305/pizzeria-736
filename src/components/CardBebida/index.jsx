@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
+
 function CardBebida({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
@@ -28,7 +29,7 @@ function CardBebida({ description, name, id, price, img }) {
         </div>
         <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
       </div>
-    </div>
+    </div >
   )
 }
 

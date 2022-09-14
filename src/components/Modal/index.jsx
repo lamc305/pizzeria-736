@@ -16,14 +16,11 @@ function Modal() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-    // transition={{ delay: 0, duration: 1 }}
     >
       <motion.div className='modal__container' onClick={handleModal}
-        layout
-        initial={{ }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0, duration: 1 }}
+        initial={{ y: 1500 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 2 }}
       >
         <p>Tu pedido ya ha sido concretado a la brevedad recibiras un whatsapp de Don Remolo.</p>
         <div className='modal__footer'>

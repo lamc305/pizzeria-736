@@ -15,17 +15,17 @@
 }
 
 .modal__container {
-  width: 60vw;
-  min-height: 40vh;
+  width: 40vw;
+  min-height: 30vh;
   background-color: #fff;
   border-radius: 30px;
-  padding: 30px;
+  padding: 80px;
 }
 
 .modal__container p {
   font-family: 'Jost';
   font-weight: 400;
-  font-size: 35px;
+  font-size: 2.5rem;
   line-height: 51px;
   color: #E74423;
 }

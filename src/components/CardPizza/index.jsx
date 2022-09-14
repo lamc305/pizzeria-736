@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
+
 function CardPizza({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)

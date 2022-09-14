@@ -5,7 +5,6 @@ function ListOfBebidas({ state, name }) {
 
   return (
     <>
-
       {state && <>
         {name &&
           <div className="ListOfItems__header">

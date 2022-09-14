@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import { ReducerContext } from '../../contexto/reducerContext'
 import { TYPES } from '../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
+
 function CardEmpanada({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
@@ -23,13 +24,13 @@ function CardEmpanada({ description, name, id, price, img }) {
       </div>
       <div className='item__buttons'>
         <div className='items___buttonsLeft'>
-            <button className='item__buttons--left'><HiMinus /></button>
-            <button className='item__buttons--center'>0</button>
-            <button className='item__buttons--left'><HiPlus /></button>
+          <button className='item__buttons--left'><HiMinus /></button>
+          <button className='item__buttons--center'>0</button>
+          <button className='item__buttons--left'><HiPlus /></button>
         </div>
         <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
       </div>
-    </div>
+    </div >
   )
 }
 
