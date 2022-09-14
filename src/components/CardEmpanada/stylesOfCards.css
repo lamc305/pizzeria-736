@@ -27,11 +27,12 @@
 .item__header h2 {
   color: var(--colorHeading);
   font-size: 2.3rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 7px;
   margin-top: 5px;
   padding-right: 23px;
   display: block;
+  font-family: Jost
 }
 
 .item__header h3 {
