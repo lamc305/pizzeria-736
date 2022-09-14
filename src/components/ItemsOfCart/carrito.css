@@ -24,6 +24,7 @@
   object-fit: contain;
   border-radius: 100%;
   min-width: 90px;
+  max-width: 175px;
 }
 
 .carrito__text h2 {
