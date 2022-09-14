@@ -4,12 +4,12 @@ import { FaCartArrowDown } from 'react-icons/fa';
 import './menu.css'
 import { useContext, useEffect, useState } from 'react';
 import { getItems } from '../../services/getItems';
-import ListOfBebidas from '../../components/ListOfBebidas';
-import ListOfEmpanadas from '../../components/ListOfEmpanada';
+import ListOfBebidas from '../../components/MenuComponents/ListOfBebidas';
+import ListOfEmpanadas from '../../components/MenuComponents/ListOfEmpanada';
 import { TYPES } from '../../action/actionReducer';
 import { Link } from 'react-router-dom';
 import { ReducerContext } from '../../contexto/reducerContext';
-import ListOfPizza from '../../components/ListOfPizza';
+import ListOfPizza from '../../components/MenuComponents/ListOfPizza';
 import { motion } from 'framer-motion'
 
 function Menu() {

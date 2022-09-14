@@ -1,13 +1,13 @@
 import { useContext } from "react"
-import ListOfItemsInCart from "../../components/ListOfItemsInCart"
+import ListOfItemsInCart from "../../components/CartComponents/ListOfItemsInCart"
 import { ReducerContext } from "../../contexto/reducerContext"
 import './cart.css'
-import Form from '../../components/FormEnvio'
+import Form from '../../components/CartComponents/FormEnvio'
 import logo from '../../assets/logo.jpg'
-import ButtonWhatsapp from "../../components/ButtonWhatsapp"
+import ButtonWhatsapp from "../../components/HomeComponents/ButtonWhatsapp"
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
-import Modal from "../../components/Modal"
+import Modal from "../../components/CartComponents/Modal"
 import { useEffect } from "react"
 import ModalContextProvider from "../../contexto/modalContext"
 

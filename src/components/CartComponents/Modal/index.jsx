@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { ModalContexto } from '../../contexto/modalContext'
+import { ModalContexto } from '../../../contexto/modalContext'
 import './modal.css'
-import logo from '../../assets/logo.jpg'
+import logo from '../../../assets/logo.jpg'
 import { motion } from 'framer-motion'
 function Modal() {
 

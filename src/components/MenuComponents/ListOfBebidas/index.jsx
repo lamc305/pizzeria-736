@@ -1,4 +1,4 @@
-import CardBebida from "../CardBebida"
+import CardBebida from "../../MenuComponents/CardBebida"
 import './listOfItems.css'
 
 function ListOfBebidas({ state, name }) {
