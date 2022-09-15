@@ -26,10 +26,10 @@ function Home() {
           <h3 className="container__title">Lo que dicen nuestros usuarios</h3>
           <p className="container__paragraph">
             Lorem ipsum dolor sit amet. Sed veritatis rerum et illo porro quo
-            ipsa optio aut reiciendis modi rem voluptatibus rerum. Id laborum
-            voluptas ab nobis odit sit amet ullam quo voluptates architecto ad
-            iure nostrum.
+            ipsa optio aut reiciendis modi rem voluptatibus rerum id laborum
+            voluptas ab nobis odit sit amet ullam quo voluptates.
           </p>
+          <ButtonWhatsapp />
         </div>
 
         <div className="container__btn">
@@ -48,8 +48,6 @@ function Home() {
             </p>
         </div>
       </section>
-
-      <ButtonWhatsapp />
     </motion.div>
   );
 }
