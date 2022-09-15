@@ -40,17 +40,23 @@ function Form() {
 
       </form>
       <div className="container__orderComplete">
-        <div className="container__subTotal">
-          <p className="text__order">Subtotal</p>
-          <p className="text__price">$1630</p>
-          <input type="text" placeholder="Código de descuento" />
-        </div>
-
-        <div className="container__Total">
+        <div className="container__pay">
+          <div className="container__subTotal">
+            <p className="text__order">Subtotal</p>
+            <p className="text__price">$1630</p>
+            <input type="text" placeholder="Código de descuento" />
+          </div>
+          <div className="container__total">
           <p className="text__modified">Total</p>
           <p className="text__price2">$1630</p>
+          </div>
+          
+        </div>
+
+        <div className="container__orderFinish">
           <button className="btn__order" onClick={handleState}>Concreta tu pedido</button>
-          <p className="paragraph">Al concretar tu pedido te llegara el contacto al whatsapp.</p>
+          <p className="paragraph">El pago es unicamente en efectivo. <br/>
+Al concretar el pedido te llegará el contacto al whatsapp. </p>
           <p className="text__modified2">¡Gracias!</p>
         </div>
       </div>
