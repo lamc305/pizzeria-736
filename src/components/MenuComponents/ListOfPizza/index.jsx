@@ -1,27 +1,25 @@
-import CardEmpanada from "../CardEmpanada"
+import CardPizza from "../../MenuComponents/CardPizza"
 import '../ListOfBebidas/listOfItems.css'
 
-function ListOfEmpanadas({ state, name }) {
+function ListOfPizza({ state, name }) {
 
   return (
     <>
-
       {state && <>
         {name &&
-          <div className="ListOfItems__header">
-            <h2 id={name}>{name}</h2>
-            <div></div>
+          <div className="ListOfItems__pizza">
+            <div id={name}></div>
           </div>
         }
         <section className='producto'>
           {state.map(({ description, name, id, price, img }) => (
-            <CardEmpanada
+            <CardPizza
               description={description}
               id={id}
-              img={img}
               key={id}
               name={name}
               price={price}
+              img={img}
             />
           ))}
         </section>
@@ -30,4 +28,4 @@ function ListOfEmpanadas({ state, name }) {
   )
 }
 
-export default ListOfEmpanadas
+export default ListOfPizza

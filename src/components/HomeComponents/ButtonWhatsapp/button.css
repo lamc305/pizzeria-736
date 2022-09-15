@@ -23,7 +23,7 @@
     width: var(--s);
     height: var(--s);
     border-radius: 60%;
-    background: rgba(0, 0, 0, 0) url(../../assets/whatsapp.svg) 50% no-repeat;
+    background: rgba(0, 0, 0, 0) url(../../../assets/whatsapp.svg) 50% no-repeat;
     background-size: 60%;
     cursor: pointer;
     overflow: hidden;

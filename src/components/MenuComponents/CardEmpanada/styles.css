@@ -6,9 +6,10 @@
   --buttonsLeft: #A4BFDF;
 }
 
+
 .item {
   display: flex;
-  background-image: url('../../assets/Rectangle_10.png');
+  background-image: url('../../../assets/Rectangle_10.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,7 +99,7 @@
   align-items: center;
 }
 
-.items___buttonsLeft{
+.items___buttonsLeft {
   display: flex;
   align-items: center;
 }

@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { ReducerContext } from '../../contexto/reducerContext'
-import { TYPES } from '../../action/actionReducer'
+import { ReducerContext } from '../../../contexto/reducerContext'
+import { TYPES } from '../../../action/actionReducer'
 import { HiPlus, HiMinus } from 'react-icons/hi'
-
+import '../CardEmpanada/styles.css'
 function CardBebida({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)

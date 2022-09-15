@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import Pizza from "../../assets/Pizza.png";
-import ButtonWhatsapp from "../../components/ButtonWhatsapp";
+import ButtonWhatsapp from "../../components/HomeComponents/ButtonWhatsapp";
 import "./home.css";
 import { motion } from 'framer-motion'
 function Home() {
