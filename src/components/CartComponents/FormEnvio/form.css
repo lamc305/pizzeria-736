@@ -4,6 +4,7 @@
 
 .container__form {
     width: 90vw;
+    max-width: 1280px;
     margin: 0 auto;
     padding-top: 18px;
     display: flex;
@@ -252,14 +253,14 @@
 
 @media (max-width: 550px) {
     .container__form {
-        width: 80vw;
+        width: 90vw;
     }
 
     .form {
         align-items: center;
         width: 100%;
         position: relative;
-        top: 140px;
+        top: 100px;
     }
 
     .form__title {
@@ -270,10 +271,12 @@
     .form__input--long {
         left: 50px;
         width: 100%;
+        font-size: 12px;
     }
 
     .form__input {
         width: 100%;
+        font-size: 12px;
     }
 
     .form__input--separate {
@@ -290,7 +293,7 @@
     }
 
     .form__texto {
-        height: 80px;
+        height: 70px;
         width: 100%;
     }
 
@@ -313,7 +316,7 @@
 
     .container__pay {
         position: relative;
-        bottom: 435px;
+        bottom: 425px;
         border-bottom: 2px solid #9dbbdf;
     }
 
@@ -326,6 +329,7 @@
     .text__price2,
     .text__modified2 {
         font-size: 15px;
+        padding: 0;
     }
 
     .text__price2 {
@@ -340,7 +344,7 @@
 
     .paragraph {
         text-align: start;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 20px;
     }
 
@@ -350,7 +354,20 @@
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width:290px) and (min-width:200px) {
+    .form {
+        top: 110px;
+    }
+
+    .form__title {
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .container__pay {
+        bottom: 400px;
+    }
+
     .btn__order {
         width: 100%
     }
