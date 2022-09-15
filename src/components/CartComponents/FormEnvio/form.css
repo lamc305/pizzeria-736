@@ -4,6 +4,7 @@
 
 .container__form {
     width: 90vw;
+    max-width: 1280px;
     margin: 0 auto;
     padding-top: 18px;
     display: flex;
@@ -63,7 +64,7 @@
 
 .form__input--separate {
     position: relative;
-    bottom: 126px;
+    bottom: 114px;
     left: 350px;
 }
 
@@ -79,10 +80,9 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
     color: #2B303A;
     position: relative;
-    top: 8px;
+    top: 20px;
     left: 12px;
     width: fit-content;
 }
@@ -130,9 +130,8 @@
     color: #6290C8;
 }
 
-.container__Total {
+.container__total {
     display: grid;
-    gap: 8px;
 }
 
 .text__modified {
@@ -142,6 +141,7 @@
     font-size: 20px;
     text-align: center;
     padding: 10px;
+    grid-column: 1/2;
 }
 
 .text__price2 {
@@ -152,6 +152,7 @@
     font-size: 20px;
     color: var(--orange);
     padding: 10px;
+    grid-column: 2/3;
 }
 
 .btn__order {
@@ -251,88 +252,31 @@
 }
 
 @media (max-width: 550px) {
-    .form__title {
-        font-size: 25px;
-        width: 100%;
-    }
-
-    .form__input {
-        font-size: 12px;
-    }
-
-    .form__input--long {
-        width: 345px;
-    }
-
-    .form__input--separate {
-        bottom: 118px;
-    }
-
-    .container__texto {
-        width: 100%;
-        position: relative;
-        bottom: 52px;
-    }
-
-
-    .form__title2 {
-        font-size: 12px;
-    }
-
-    .form__texto {
-        height: 60px;
-    }
-
-    .container__orderComplete {
-        bottom: 45px;
-    }
-
-    .container__orderComplete input {
-        width: 100%;
-    }
-
-    .container__subTotal {
-        font-size: 15px;
-    }
-
-    .text__modified,
-    .text__price2,
-    .text__modified2 {
-        font-size: 18px;
-    }
-
-    .btn__order {
-        font-size: 25px;
-        height: 55px;
-        width: 400px;
-    }
-
-    .paragraph {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 445px) {
     .container__form {
-        width: 80vw;
+        width: 90vw;
     }
 
     .form {
         align-items: center;
+        width: 100%;
+        position: relative;
+        top: 100px;
     }
 
     .form__title {
-        font-size: 18px;
-        text-align: center;
+        font-size: 20px;
+        width: 100%;
     }
 
     .form__input--long {
         left: 50px;
         width: 100%;
+        font-size: 12px;
     }
 
     .form__input {
         width: 100%;
+        font-size: 12px;
     }
 
     .form__input--separate {
@@ -345,14 +289,17 @@
 
     .form__title2 {
         font-size: 10px;
+        top: 15px;
     }
 
     .form__texto {
-        height: max-content;
+        height: 70px;
+        width: 100%;
     }
 
     .container__orderComplete {
         position: static;
+        width: 90vw;
     }
 
     .container__orderComplete input {
@@ -367,10 +314,22 @@
         width: 100%;
     }
 
+    .container__pay {
+        position: relative;
+        bottom: 425px;
+        border-bottom: 2px solid #9dbbdf;
+    }
+
+    .container__subTotal {
+        border: none;
+        padding: 0;
+    }
+
     .text__modified,
     .text__price2,
     .text__modified2 {
         font-size: 15px;
+        padding: 0;
     }
 
     .text__price2 {
@@ -381,11 +340,34 @@
         width: 100%;
         font-size: 18px;
         height: max-content;
-        width: 330px;
+    }
+
+    .paragraph {
+        text-align: start;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .text__modified2 {
+        text-align: start;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width:290px) and (min-width:200px) {
+    .form {
+        top: 110px;
+    }
+
+    .form__title {
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .container__pay {
+        bottom: 400px;
+    }
+
     .btn__order {
         width: 100%
     }

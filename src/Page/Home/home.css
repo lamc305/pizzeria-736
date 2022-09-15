@@ -10,36 +10,34 @@
 }
 
 .container__home {
-  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .hero {
   border-bottom: 2px solid #a4bfdf;
   display: flex;
-  height: 110px;
   justify-content: flex-end;
-  margin-left: var(--m);
-  margin-right: var(--m);
+  width: 90vw;
+  max-width: 1200px;
+  margin: 20px auto 0;
 }
 
 .hero__img {
-  height: var(--si);
-  position: relative;
-  top: 22px;
-  width: var(--si);
+  width: 100%;
+  max-width: 87px;
+  object-fit: contain;
 }
 
 .container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  margin: 20px auto 0;
 }
 
 .container__pizza {
-  padding-top: 28px;
-  width: 600px;
+  grid-column: 1/2;
+  grid-row: 1 /span 2;
+  width: 90%;
   margin-left: var(--m);
 }
 
@@ -47,38 +45,47 @@
   width: 100%;
 }
 
+.container__description {
+  grid-row: 3;
+  grid-column: 1/ span 2;
+  margin-left: var(--m);
+}
+
 .container__title {
-  width: 100%;
+  width: max-content;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 46px;
   line-height: 66px;
   color: var(--orange);
-  padding: 10px 0;
 }
 
 .container__paragraph {
-  height: 23px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  width: 70%;
+}
+
+.joinchat {
+  bottom: 70px;
+  left: 90%;
+  position: relative;
+  max-width: 60px;
 }
 
 .container__toMenu {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  justify-content: center;
+  margin-top: 115px;
+  margin-left: 30px;
+  grid-column: 2/3;
   position: relative;
-  bottom: 80px;
-  left: 30px;
+  right: 28px;
 }
 
 .container__title2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 107px;
-  line-height: 155px;
   color: var(--orange);
 }
 
@@ -86,13 +93,15 @@
   font-family: "Roboto";
   font-weight: 400;
   font-size: 20px;
-  position: relative;
-  left: 6px;
+  margin-left: 10px;
 }
 
 .container__btn {
-  position: relative;
-  top: 215px;
+  align-items: flex-end;
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2;
+  margin-left: 30px;
 }
 
 .btn {
@@ -101,14 +110,11 @@
   height: 80px;
   cursor: pointer;
   background: transparent;
-  padding: 20px;
   font-size: 30px;
   font-weight: bold;
   color: var(--orange);
   border: 1px solid var(--orange);
   border-radius: 10px;
-  position: relative;
-  left: 60px;
 }
 
 .btn:hover {
@@ -116,66 +122,93 @@
   color: #fff;
 }
 
-@media (max-width: 1360px) {
-  .container__pizza {
-    width: 500px;
-  }
-
+@media (max-width: 1100px) {
   .container__title {
     font-size: 35px;
+  }
+
+  .container__toMenu {
+    right: 0;
   }
 
   .container__title2 {
     font-size: 80px;
   }
-
-  .btn {
-    left: 0;
-    bottom: 55px;
-  }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1010px) {
   .container {
-    align-items: center;
-    flex-direction: column-reverse;
-    gap: 2rem;
+    margin: 0;
   }
 
   .container__pizza {
-    height: 100px;
-    width: 80%;
-    margin-left: 0;
+    width: 70%;
+    height: 100%;
+    grid-column: 1/3;
+    grid-row: 2;
+    padding-top: 16px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .container__description {
+    grid-row: 4;
+    grid-column: 1/3;
+    margin: 0 auto;
+    width: 70vw;
+  }
+
+  .container__paragraph {
+    width: 100%;
+    font-size: 18px;
   }
 
   .container__title {
     line-height: normal;
   }
 
-  .container__paragraph2 {
+  .joinchat {
+    position: fixed;
     left: auto;
-    right: 78px;
+    bottom: 8px;
   }
 
   .container__toMenu {
-    width: 100%;
-    height: 90vh;
-    align-items: center;
-    left: auto;
+    margin: 0 auto;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 70%;
   }
 
   .container__btn {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: auto;
-    bottom: 20px;
+    grid-row: 3;
+    grid-column: 1/3;
+    margin: 10px auto;
+    align-items: center;
+    width: 70vw;
+  }
+
+  .btn {
+    width: 70vw;
   }
 
 }
 
 @media (max-width: 760px) {
+
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .container__pizza {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container__description {
+    margin: 0;
+  }
 
   .container__title {
     width: 100%;
@@ -183,71 +216,114 @@
     font-weight: 100;
   }
 
+  .container__paragraph {
+    width: 90vw;
+  }
+
   .container__paragraph2 {
-    right: 28px;
+    font-size: 18px;
+    margin: 0;
   }
 
   .container__title2 {
     font-size: 60px;
   }
 
-  .btn {
-    width: 400px;
+  .container__btn {
+    width: 100%;
   }
+
+  .container__toMenu {
+    margin: 0;
+    width: max-content;
+  }
+
+  .btn {
+    width: 90vw;
+  }
+
 }
 
-@media (max-width: 500px) {
-  .hero {
-    height: 82px;
-  }
-
+@media (max-width: 550px) {
   .hero__img {
     height: 60px;
     width: 60px;
   }
 
-  .container__paragraph {
-    width: 100%;
+  .container__pizza {
+    width: 95%;
+  }
+
+  .container__description {
+    top: 50px;
+    left: 15px;
+  }
+
+  .container__title {
+    width: max-content;
+    padding: 5px 0;
   }
 
   .container__title2 {
     font-size: 40px;
-    line-height: normal;
-  }
-
-  .container__paragraph2 {
-    position: static;
-    padding-top: 15px;
-    font-size: 15px;
-  }
-
-  .container__btn {
-    width: 90%;
-    position: absolute;
-    left: auto;
-    top: auto;
-    bottom: 20px;
-  }
-
-  .btn {
-    padding: 14px;
-    font-size: 25px;
-    width: 280px;
-  }
-}
-
-@media (max-width: 357px) {
-  .container__title {
-    font-size: 18px;
   }
 
   .container__paragraph {
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .container__paragraph2 {
+    padding-top: 15px;
+    font-size: 12px;
   }
 
   .btn {
-    padding: 14px;
-    font-size: 20px;
-    width: 240px;
+    font-size: 25px;
+    width: 88vw;
+    height: 50px;
+  }
+
+  .container__toMenu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --siz: 50px
+  }
+
+  .container__title {
+    font-size: 14px;
+  }
+
+  .container__paragraph {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .container__pizza {
+    height: 277px;
+  }
+
+  .joinchat {
+    max-width: var(--siz);
+    min-width: var(--siz);
+    height: var(--siz);
+  }
+
+  .joinchat__button {
+    width: var(--siz);
+    height: var(--siz);
+  }
+}
+
+@media (max-width: 300px) {
+  .container__pizza {
+    height: auto;
+  }
+
+  .container__paragraph2 {
+    padding: 0;
   }
 }

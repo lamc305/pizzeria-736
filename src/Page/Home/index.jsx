@@ -21,28 +21,33 @@ function Home() {
       <section className="container">
         <div className="container__pizza">
           <img src={Pizza} alt="Pizaa" className="container__img" />
+        </div>
+        <div className="container__description">
           <h3 className="container__title">Lo que dicen nuestros usuarios</h3>
           <p className="container__paragraph">
             Lorem ipsum dolor sit amet. Sed veritatis rerum et illo porro quo
-            ipsa optio aut reiciendis modi rem voluptatibus rerum. Id laborum
-            voluptas ab nobis odit sit amet ullam quo voluptates architecto ad
-            iure nostrum.
+            ipsa optio aut reiciendis modi rem voluptatibus rerum id laborum
+            voluptas ab nobis odit sit amet ullam quo voluptates.
           </p>
+          <ButtonWhatsapp />
         </div>
-        <div className="container__toMenu">
-          <h3 className="container__title2">Don Remolo</h3>
-          <p className="container__paragraph2">La mejor pizza de colegiales!</p>
-          <div className="container__btn">
+
+        <div className="container__btn">
             <Link to="/menu">
               <button className="btn">
                 Hace tu pedido
               </button>
             </Link>
           </div>
+
+        <div className="container__toMenu">
+          <h3 className="container__title2">Don Remolo</h3>
+          <p className="container__paragraph2">
+            La mejor pizza de colegiales! <br/>
+            Te llevamos tu pizza Martes a domingo de 11.30 a 23.00
+            </p>
         </div>
       </section>
-
-      <ButtonWhatsapp />
     </motion.div>
   );
 }

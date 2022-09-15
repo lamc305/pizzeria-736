@@ -32,3 +32,10 @@
 .joinchat:hover {
     background: #eb5c3f;
 }
+
+
+@media (max-width: 550px) {
+    .joinchat {
+        right: 15px;
+    }
+}
