@@ -24,7 +24,9 @@
 .itemsOfCart__container {
   position: relative;
   width: 90vw;
+  max-width: 1200px;
   margin: 0 auto;
+  padding-top: 15px;
   min-height: 218px;
   border-top: 2px #A4BFDF solid;
   border-bottom: 2px #A4BFDF solid;

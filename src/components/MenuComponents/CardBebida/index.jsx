@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { ReducerContext } from '../../../contexto/reducerContext'
 import { TYPES } from '../../../action/actionReducer'
-import { HiPlus, HiMinus } from 'react-icons/hi'
 import '../CardEmpanada/styles.css'
+import ButtonPlusMinus from '../ButtonPlusMinus'
 function CardBebida({ description, name, id, price, img }) {
 
   const { dispatch } = useContext(ReducerContext)
@@ -22,11 +22,7 @@ function CardBebida({ description, name, id, price, img }) {
         <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
-        <div className='items___buttonsLeft'>
-          <button className='item__buttons--left'><HiMinus /></button>
-          <button className='item__buttons--center'>0</button>
-          <button className='item__buttons--left'><HiPlus /></button>
-        </div>
+        <ButtonPlusMinus />
         <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
       </div>
     </div >

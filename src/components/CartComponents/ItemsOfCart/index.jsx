@@ -1,9 +1,10 @@
-import './carrito.css'
-import { HiMinus, HiOutlineTrash, HiPlus } from "react-icons/hi"
+import './styles.css'
+import { HiOutlineTrash } from "react-icons/hi"
+import ButtonPlusMinus from '../../MenuComponents/ButtonPlusMinus'
 
 function ItemsOfCart({ name, price, description, img }) {
   return (
-    <section className='carrito'>
+    <div className='carrito' >
       <div className='carrito__image'>
         <img src={img} loading='lazy' alt="product" />
       </div>
@@ -12,11 +13,7 @@ function ItemsOfCart({ name, price, description, img }) {
         <p>{description}</p>
       </div>
       <div className="carrito__Buttons">
-        <div className='items__buttonsLeft'>
-          <button className=''><HiMinus /></button>
-          <button className=''>0</button>
-          <button className=''><HiPlus /></button>
-        </div>
+        <ButtonPlusMinus />
       </div>
       <div className='carrito__priceTrash'>
         <h2>${price}</h2>
@@ -24,7 +21,7 @@ function ItemsOfCart({ name, price, description, img }) {
           <HiOutlineTrash />
         </button>
       </div>
-    </section >
+    </div>
   )
 }
 
