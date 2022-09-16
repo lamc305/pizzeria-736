@@ -10,7 +10,6 @@
     right: 8px;
     height: var(--s);
     min-width: var(--s);
-    max-width: 95vw;
     background: var(--orange);
     color: inherit;
     border-radius: calc(var(--s) / 2);

@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-end;
   width: 90vw;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 20px auto 0;
 }
 
@@ -127,8 +127,8 @@
     font-size: 35px;
   }
 
-  .container__toMenu {
-    right: 0;
+  .btn {
+    width: 42vw;
   }
 
   .container__title2 {
