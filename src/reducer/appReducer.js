@@ -1,12 +1,7 @@
 import { TYPES } from "../action/actionReducer"
-
+import { products } from "../services/object"
 export const initialStateApp = {
-  products: {
-    pizzas: null,
-    empanadas: null,
-    postres: null,
-    bebidas: null,
-  },
+  products,
   cart: []
 }
 
@@ -24,7 +19,7 @@ export const appReducer = (state, action) => {
       }
     case TYPES.ADD_TO_CART: {
       let newItem = action.payload;
-      
+
       return {
         ...state, cart: [...state.cart, newItem]
       }
