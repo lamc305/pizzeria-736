@@ -2,11 +2,9 @@
 import logo from '../../assets/logo.jpg'
 import { FaCartArrowDown } from 'react-icons/fa';
 import './menu.css'
-import { useContext, useEffect, useState } from 'react';
-import { getItems } from '../../services/getItems';
+import { useContext, useState } from 'react';
 import ListOfBebidas from '../../components/MenuComponents/ListOfBebidas';
 import ListOfEmpanadas from '../../components/MenuComponents/ListOfEmpanada';
-import { TYPES } from '../../action/actionReducer';
 import { Link } from 'react-router-dom';
 import { ReducerContext } from '../../contexto/reducerContext';
 import ListOfPizza from '../../components/MenuComponents/ListOfPizza';
@@ -14,12 +12,9 @@ import { motion } from 'framer-motion'
 
 function Menu() {
 
-  const { state, dispatch } = useContext(ReducerContext)
+  const { pizza, bebida, postre, empanada } = useContext(ReducerContext)
   const [toggleList, setToggleList] = useState("#")
 
-  useEffect(() => {
-    Promise.all(getItems).then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
-  }, [dispatch])
 
   const handleClass = (index) => {
     setToggleList(index)
@@ -54,10 +49,10 @@ function Menu() {
         <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
       </div>
 
-      <ListOfPizza state={state.products.pizzas} name="Pizzas" />
-      <ListOfEmpanadas state={state.products.empanadas} name='Empanadas' />
-      <ListOfBebidas state={state.products.bebidas} name='Bebidas' />
-      <ListOfBebidas state={state.products.postres} name='Postres' />
+      <ListOfPizza state={pizza} name="Pizzas" />
+      <ListOfEmpanadas state={empanada} name='Empanadas' />
+      <ListOfBebidas state={bebida} name='Bebidas' />
+      <ListOfBebidas state={postre} name='Postres' />
     </motion.div>
   )
 }

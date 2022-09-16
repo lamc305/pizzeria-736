@@ -12,15 +12,8 @@ function ListOfPizza({ state, name }) {
           </div>
         }
         <section className='producto'>
-          {state.map(({ description, name, id, price, img }) => (
-            <CardPizza
-              description={description}
-              id={id}
-              key={id}
-              name={name}
-              price={price}
-              img={img}
-            />
+          {state.map(res => (
+            <CardPizza key={res.id} {...res} />
           ))}
         </section>
       </>}

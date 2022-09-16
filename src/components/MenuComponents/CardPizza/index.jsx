@@ -4,12 +4,13 @@ import { ReducerContext } from '../../../contexto/reducerContext'
 import { TYPES } from '../../../action/actionReducer'
 import ButtonPlusMinus from '../ButtonPlusMinus'
 
-function CardPizza({ description, name, id, price, img }) {
+function CardPizza(props) {
 
+  const cargarImagen = require.context("../../../assets", true);
   const { dispatch } = useContext(ReducerContext)
   const [togglePizza, setTogglePizza] = useState(1)
-  const addToCart = (id, name, price, img, description) => {
-    dispatch({ type: TYPES.ADD_TO_CART, payload: { id, name, price, img, description } })
+  const addToCart = (id, name, price, image, description) => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: { id, name, price, image, description } })
   }
 
 
@@ -22,13 +23,13 @@ function CardPizza({ description, name, id, price, img }) {
   const classNameActive3 = togglePizza === 3 ? 'item___list--active' : null
 
   return (
-    <div className='item' id={id}>
+    <div className='item' id={props.id}>
       <div className='item__header'>
         <div className='item__header--text'>
-          <h2>{name}</h2>
+          <h2>{props.name}</h2>
         </div>
-        <h3>{description}</h3>
-        <h2 className='item__price'>${price}</h2>
+        <h3>{props.description}</h3>
+        <h2 className='item__price'>${props.price}</h2>
         <div>
           <ul className='item__list'>
             <li className={classNameActive1} onClick={() => handleClass(1)}>Chica</li>
@@ -36,11 +37,11 @@ function CardPizza({ description, name, id, price, img }) {
             <li className={classNameActive3} onClick={() => handleClass(3)}>1/2 Pizza</li>
           </ul>
         </div>
-        <img className='item__image' loading='lazy' src={img} alt={name} />
+        <img className='item__image' loading='lazy' src={cargarImagen(props.image)} alt={props.name} />
       </div>
       <div className='item__buttons'>
-        <ButtonPlusMinus />
-        <button className='item__buttons--right' onClick={() => addToCart(id, name, price, img, description)}>Pedir</button>
+        <ButtonPlusMinus category='pizzas' {...props} />
+        <button className='item__buttons--right' onClick={() => addToCart(props)}>Pedir</button>
       </div>
     </div>
   )

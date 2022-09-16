@@ -8,8 +8,12 @@ export const ReducerContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(appReducer, initialStateApp)
 
-  const data = { state, dispatch }
+  const pizza = state.products.filter(res => res.category === 'pizza')
+  const bebida = state.products.filter(res => res.category === 'bebida')
+  const postre = state.products.filter(res => res.category === 'postre')
+  const empanada = state.products.filter(res => res.category === 'empanada')
 
+  const data = { state, dispatch, pizza, bebida, postre, empanada }
   return (
     <ReducerContext.Provider value={data}>
       {children}
