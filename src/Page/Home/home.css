@@ -19,7 +19,7 @@
   display: flex;
   justify-content: flex-end;
   width: 90vw;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 20px auto 0;
 }
 
@@ -131,9 +131,18 @@
     width: 42vw;
   }
 
+  .container__toMenu {
+    right: 0;
+  }
+
   .container__title2 {
     font-size: 80px;
   }
+
+  .container__paragraph2 {
+    font-size: 18px;
+  }
+
 }
 
 @media (max-width: 1010px) {
