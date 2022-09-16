@@ -127,13 +127,18 @@
     font-size: 35px;
   }
 
-  .container__toMenu {
-    right: 0;
+  .btn {
+    width: 42vw;
   }
 
   .container__title2 {
     font-size: 80px;
   }
+
+  .container__paragraph2 {
+    font-size: 18px;
+  }
+
 }
 
 @media (max-width: 1010px) {
