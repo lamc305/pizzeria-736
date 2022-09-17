@@ -6,7 +6,6 @@ import ButtonPlusMinus from '../ButtonPlusMinus'
 
 function CardPizza(props) {
 
-  const cargarImagen = require.context("../../../assets", true);
   const { dispatch } = useContext(ReducerContext)
   const [togglePizza, setTogglePizza] = useState(1)
   const addToCart = (id, name, price, image, description) => {
@@ -37,7 +36,7 @@ function CardPizza(props) {
             <li className={classNameActive3} onClick={() => handleClass(3)}>1/2 Pizza</li>
           </ul>
         </div>
-        <img className='item__image' loading='lazy' src={cargarImagen(props.image)} alt={props.name} />
+        <img className='item__image' loading='lazy' src={props.image} alt={props.name} />
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus category='pizzas' {...props} />

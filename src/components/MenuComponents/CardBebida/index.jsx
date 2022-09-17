@@ -6,7 +6,6 @@ import ButtonPlusMinus from '../ButtonPlusMinus'
 function CardBebida({ description, name, id, price, image }) {
 
   const { dispatch } = useContext(ReducerContext)
-  const cargarImagen = require.context("../../../assets", true);
   const addToCart = (id, name, price, image, description) => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: { id, name, price, image, description } })
   }
@@ -19,7 +18,7 @@ function CardBebida({ description, name, id, price, image }) {
           <h2>${price}</h2>
         </div>
         <h3>{description}</h3>
-        <img className='item__image' loading='lazy' src={cargarImagen(image)} alt={name} />
+        <img className='item__image' loading='lazy' src={image} alt={name} />
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus />

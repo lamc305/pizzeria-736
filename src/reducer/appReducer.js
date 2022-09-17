@@ -1,7 +1,6 @@
 import { TYPES } from "../action/actionReducer"
-import { products } from "../services/object"
 export const initialStateApp = {
-  products,
+  products: null,
   cart: []
 }
 
@@ -10,19 +9,25 @@ export const appReducer = (state, action) => {
     case TYPES.CALL_API:
       return {
         ...state,
-        products: {
-          pizzas: action.payload[0],
-          empanadas: action.payload[1],
-          postres: action.payload[2],
-          bebidas: action.payload[3]
+        products:
+          action.payload
+      }
+    case TYPES.ADD_ONE: {
+      let item = state.products.find(
+        (product) => product.id === action.payload);
+      let newItem = state.products.find(product => product.quantity >= item.quantity)
+      return newItem ?
+        {
+          ...state,
+          products: state.products.map(res => (
+            res.id === item.id ? { ...res, quantity: res.quantity + 1 } : res
+          ))
+        } : {
+          ...state,
+          products: state.products.map(res => (
+            res.id === item.id ? { ...res, quantity: 1 } : res
+          ))
         }
-      }
-    case TYPES.ADD_TO_CART: {
-      let newItem = action.payload;
-
-      return {
-        ...state, cart: [...state.cart, newItem]
-      }
     }
     default:
       return state

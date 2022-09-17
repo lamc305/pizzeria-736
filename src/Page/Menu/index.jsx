@@ -9,16 +9,24 @@ import { Link } from 'react-router-dom';
 import { ReducerContext } from '../../contexto/reducerContext';
 import ListOfPizza from '../../components/MenuComponents/ListOfPizza';
 import { motion } from 'framer-motion'
+import { useEffect } from 'react';
+import { getProducts } from '../../services/getItems';
+import { TYPES } from '../../action/actionReducer';
 
 function Menu() {
 
-  const { pizza, bebida, postre, empanada } = useContext(ReducerContext)
+  const { dispatch, pizza, empanada, bebida, postre } = useContext(ReducerContext)
   const [toggleList, setToggleList] = useState("#")
 
 
   const handleClass = (index) => {
     setToggleList(index)
   }
+
+
+  useEffect(() => {
+    getProducts().then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
+  }, [dispatch])
 
   const toggleClass1 = toggleList === '#Empanadas' ? 'tabs__menu--active' : null
   const toggleClass2 = toggleList === '#Postres' ? 'tabs__menu--active' : null

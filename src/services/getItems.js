@@ -1,9 +1,11 @@
-const URL = 'https://pizzeriawebapi.herokuapp.com/api/'
+const URL = 'https://apipizzeria.herokuapp.com/products'
 
-export const getItems = [
-  fetch(`${URL}pizza`).then(res => res.json()),
-  fetch(`${URL}empanada`).then(res => res.json()),
-  fetch(`${URL}postre`).then(res => res.json()),
-  fetch(`${URL}bebida`).then(res => res.json())
-]
+export function getProducts() {
+  return fetch(URL)
+    .then(res => res.json())
+    .then(response => {
+      const data = response
+      return data
+    })
+}
 
