@@ -13,7 +13,7 @@ function ListOfBebidas({ state, name }) {
           </div>
         }
         <section className='producto'>
-          {state.map(({ description, name, id, price, image }) => (
+          {state.map(({ description, name, id, price, image, quantity = 0 }) => (
             <CardBebida
               description={description}
               id={id}
@@ -21,6 +21,7 @@ function ListOfBebidas({ state, name }) {
               name={name}
               price={price}
               image={image}
+              quantity={quantity}
             />
           ))}
         </section>

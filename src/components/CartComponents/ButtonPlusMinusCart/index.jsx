@@ -2,15 +2,15 @@ import { useContext } from "react"
 import { HiMinus, HiPlus } from "react-icons/hi"
 import { TYPES } from "../../../action/actionReducer"
 import { ReducerContext } from "../../../contexto/reducerContext"
-import './styles.css'
-function ButtonPlusMinus({ id, quantity }) {
+function ButtonPlusMinusCart({ id, quantity }) {
   const { dispatch } = useContext(ReducerContext)
+
   const handlePlus = (id) => {
-    dispatch({ type: TYPES.ADD_ONE, payload: id })
+    dispatch({ type: TYPES.ADD_ONE_IN_CART, payload: id })
   }
 
   const handleMinus = (id) => {
-    dispatch({ type: TYPES.REMOVE_ONE, payload: id })
+    dispatch({ type: TYPES.REMOVE_ONE_IN_CART, payload: id })
   }
 
 
@@ -24,4 +24,4 @@ function ButtonPlusMinus({ id, quantity }) {
   )
 }
 
-export default ButtonPlusMinus
+export default ButtonPlusMinusCart

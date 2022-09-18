@@ -1,6 +1,4 @@
-import { useContext } from "react"
 import ListOfItemsInCart from "../../components/CartComponents/ListOfItemsInCart"
-import { ReducerContext } from "../../contexto/reducerContext"
 import './cart.css'
 import Form from '../../components/CartComponents/FormEnvio'
 import logo from '../../assets/logo.jpg'
@@ -13,15 +11,11 @@ import ModalContextProvider from "../../contexto/modalContext"
 
 function Cart() {
 
-  const { state } = useContext(ReducerContext)
-  const { cart } = state
-
   useEffect(() => {
     window.scroll({
       top: 0,
       behavior: 'smooth'
     })
-
   }, [])
   return (
     <motion.div
@@ -37,7 +31,7 @@ function Cart() {
             <img className="cart__headerLogo" loading='lazy' src={logo} alt='logo' />
           </Link>
         </div>
-        <ListOfItemsInCart cart={cart} />
+        <ListOfItemsInCart />
         <Form />
         <ButtonWhatsapp />
       </ModalContextProvider>
