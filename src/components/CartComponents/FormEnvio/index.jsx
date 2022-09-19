@@ -12,6 +12,8 @@ function FormEnvio() {
     setIsOpen('is_open')
   }
 
+
+
   return (
     <>
       <Formik
@@ -28,6 +30,11 @@ function FormEnvio() {
         validate={(valores) => {
           let errores = {}
 
+          //validacion calle
+          if (!valores.calle) {
+            errores.calle = 'Por favor ingresa una calle'
+          }
+
           //validacion numero
           if (!valores.numero) {
             errores.numero = 'Por favor ingresa un numero'
@@ -36,12 +43,28 @@ function FormEnvio() {
             errores.numero = 'Numero incorrecto'
           }
 
+          //validacion piso
+          if (!valores.piso) {
+            errores.piso = 'Por favor ingresa un piso'
+          }
+
           //validacion celular
           if (!valores.celular) {
             errores.celular = 'Por favor ingresa un numero celular'
             // eslint-disable-next-line no-useless-escape
           } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(valores.celular)) {
             errores.celular = 'Numero de celular incorrecto'
+          }
+          //validacion codigo postal
+          if (!valores.codigoPostal) {
+            errores.codigoPostal = 'Por favor ingresa una calle'
+          } else if (!/[0-9]$/.test(valores.codigoPostal)) {
+            errores.codigoPostal = 'Codigo postal incorrecto'
+          }
+
+          //validacion departamento
+          if (!valores.departamento) {
+            errores.departamento = 'Por favor ingresa el departamento'
           }
           return errores;
         }}
@@ -53,55 +76,84 @@ function FormEnvio() {
           <Form className="container__form">
             <div className="form" >
               <label className="form__title">¿A donde llevamos el pedido?</label>
-              <Field
-                type="text"
-                id="calle"
-                name="calle"
-                className="form__input--long"
-                placeholder="Calle"
-              />
-              <Field
-                type="text"
-                id="numero"
-                name="numero"
-                className="form__input"
-                placeholder="Numero"
-              />
-              <ErrorMessage name="numero" component={() => (
-                <div className="error">{errors.numero}</div>
-              )} />
-              <Field
-                type="text"
-                id="piso"
-                name="piso"
-                className="form__input"
-                placeholder="Piso"
-              />
-              <Field
-                type="text"
-                id="celular"
-                name="celular"
-                className="form__input"
-                placeholder="Celular"
-              />
-              <ErrorMessage name="celular" component={() => (
-                <div className="error">{errors.celular}</div>
-              )} />
+              <div className="calle">
+                <Field
+                  type="text"
+                  id="calle"
+                  name="calle"
+                  className="form__input--long"
+                  placeholder="Calle"
+                />
+                <ErrorMessage name="calle" component={() => (
+                  <div className="error">{errors.calle}</div>
+                )} />
+              </div>
+              <div className="numero">
 
-              <Field
-                type="text"
-                id="codigoPostal"
-                name="codigoPostal"
-                className="form__input form__input--separate"
-                placeholder="Código postal"
-              />
-              <Field
-                type="text"
-                id="departamento"
-                name="departamento"
-                className="form__input form__input--separate"
-                placeholder="Departamento"
-              />
+                <Field
+                  type="text"
+                  id="numero"
+                  name="numero"
+                  className="form__input"
+                  placeholder="Numero"
+                />
+                <ErrorMessage name="numero" component={() => (
+                  <div className="error">{errors.numero}</div>
+                )} />
+              </div>
+              <div className="piso">
+
+                <Field
+                  type="text"
+                  id="piso"
+                  name="piso"
+                  className="form__input"
+                  placeholder="Piso"
+                />
+                <ErrorMessage name="piso" component={() => (
+                  <div className="error">{errors.piso}</div>
+                )} />
+              </div>
+              <div className="celular">
+
+                <Field
+                  type="text"
+                  id="celular"
+                  name="celular"
+                  className="form__input"
+                  placeholder="Celular"
+                />
+                <ErrorMessage name="celular" component={() => (
+                  <div className="error">{errors.celular}</div>
+                )} />
+              </div>
+
+              <div className="postal">
+                <Field
+                  type="text"
+                  id="codigoPostal"
+                  name="codigoPostal"
+                  className=" form__input--separate"
+                  placeholder="Código postal"
+                />
+                <ErrorMessage name="codigoPostal" component={() => (
+                  <div className="error">{errors.codigoPostal}</div>
+                )} />
+
+              </div>
+              <div className="departamento">
+                <Field
+                  type="text"
+                  id="departamento"
+                  name="departamento"
+                  className=" form__input--separate"
+                  placeholder="Departamento"
+                />
+                <ErrorMessage name="departamento" component={() => (
+                  <div className="error">{errors.departamento}</div>
+                )} />
+              </div>
+
               <div className="container__texto">
                 <label className="form__title2">¿Algo que debamos saber?</label>
                 <Field
