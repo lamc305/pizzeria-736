@@ -68,6 +68,13 @@
     left: 350px;
 }
 
+.error {
+    font-size: 14px;
+    color: var(--orange);
+    font-family: 'Jost';
+    width: fit-content;
+}
+
 .container__texto {
     position: relative;
     bottom: 80px;

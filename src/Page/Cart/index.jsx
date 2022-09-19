@@ -1,6 +1,6 @@
 import ListOfItemsInCart from "../../components/CartComponents/ListOfItemsInCart"
 import './cart.css'
-import Form from '../../components/CartComponents/FormEnvio'
+import FormEnvio from '../../components/CartComponents/FormEnvio'
 import logo from '../../assets/logo.jpg'
 import ButtonWhatsapp from "../../components/HomeComponents/ButtonWhatsapp"
 import { Link } from "react-router-dom"
@@ -32,7 +32,7 @@ function Cart() {
           </Link>
         </div>
         <ListOfItemsInCart />
-        <Form />
+        <FormEnvio />
         <ButtonWhatsapp />
       </ModalContextProvider>
     </motion.div>
