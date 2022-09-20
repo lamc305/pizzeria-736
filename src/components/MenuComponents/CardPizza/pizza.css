@@ -19,6 +19,12 @@
   font-size: 1.8rem;
 }
 
+.inCart {
+  background-color: #fff;
+  color: #E74423;
+  border: 1px solid #E74423;
+}
+
 .item___list--active {
   width: 84px;
   border-bottom: 2.5px #A4BFDF solid;

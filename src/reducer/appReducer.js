@@ -8,10 +8,12 @@ export const initialStateApp = {
 export const appReducer = (state, action) => {
   switch (action.type) {
     case TYPES.CALL_API:
-      return {
+      return state.products === null ? {
         ...state,
         products:
           action.payload
+      } : {
+        ...state
       }
     case TYPES.ADD_ONE: {
       let item = state.products.find(
@@ -61,7 +63,11 @@ export const appReducer = (state, action) => {
         }
         :
         newItem.quantity >= 1 && !isNaN(newItem.quantity) ? {
-          ...state,
+          products:
+            state.products.map(res => (
+              res.id === newItem.id ? { ...res, inCart: true } : res
+            ))
+          ,
           cart: [...state.cart, newItem]
 
         } : {
@@ -75,7 +81,9 @@ export const appReducer = (state, action) => {
       let newItem = state.cart.find(product => product.quantity >= item.quantity)
       return newItem ?
         {
-          ...state,
+          products: state.products.map(res => (
+            res.id === item.id ? { ...res, quantity: res.quantity + 1 } : res
+          )),
           cart: state.cart.map(res => (
             res.id === item.id ? { ...res, quantity: res.quantity + 1 } : res
           ))
@@ -88,27 +96,30 @@ export const appReducer = (state, action) => {
     }
     case TYPES.REMOVE_ONE_IN_CART: {
       let item = state.cart.find((product) => product.id === action.payload);
-      let newItem = state.cart.find(product => product.quantity >= item.quantity)
-      return newItem ?
+      return item.quantity > 1 ?
         {
-          ...state,
+          products: state.products.map(res => (
+            res.id === item.id ? { ...res, quantity: res.quantity - 1 } : res
+          )),
           cart: state.cart.map(res => (
-            res.id === item.id ? { ...res, quantity: res.quantity > 0 ? res.quantity - 1 : 0 } : res
+            res.id === item.id ? { ...res, quantity: res.quantity - 1 } : res
           ))
         } : {
-          ...state,
-          cart: state.cart.map(res => (
-            res.id === item.id ? { ...res } : res
-          ))
+          products: state.products.map(res => (
+            res.id === item.id ? { ...res, inCart: false, quantity: 0 } : res
+          )),
+          cart: state.cart.filter((res => res.id !== item.id))
         }
     }
     case TYPES.CLEAR_CART: {
+      let item = state.cart.find(res => res.id === action.payload)
       return {
-        ...state,
+        products: state.products.map(res => (
+          res.id === item.id ? { ...res, inCart: false, quantity: 0 } : res
+        )),
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
     }
-
     default:
       return state
   }

@@ -15,7 +15,7 @@ import { TYPES } from '../../action/actionReducer';
 
 function Menu() {
 
-  const { dispatch, pizza, empanada, bebida, postre } = useContext(ReducerContext)
+  const { dispatch, pizza, empanada, bebida, postre, state } = useContext(ReducerContext)
   const [toggleList, setToggleList] = useState("#")
 
 
@@ -26,7 +26,7 @@ function Menu() {
 
   useEffect(() => {
     getProducts().then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
-  }, [dispatch])
+  }, [dispatch, state.product])
 
   const toggleClass1 = toggleList === '#Empanadas' ? 'tabs__menu--active' : null
   const toggleClass2 = toggleList === '#Postres' ? 'tabs__menu--active' : null
@@ -59,7 +59,12 @@ function Menu() {
         <div><a href='#Empanadas' className={toggleClass1} onClick={() => handleClass('#Empanadas')}>Empanadas</a></div>
         <div><a href='#Postres' className={toggleClass2} onClick={() => handleClass('#Postres')}>Postres</a></div>
         <div><a href='#Bebidas' className={toggleClass3} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
-        <div><Link to='/cart' className='tabs__cartIcon'><FaCartArrowDown /></Link></div>
+        <div className='iconContainer'>
+          <Link to='/cart' className='tabs__cartIcon'>
+            <span>{state.cart.length > 0 ? state.cart.length : null}</span>
+            <FaCartArrowDown />
+          </Link>
+        </div>
       </div>
 
       <ListOfPizza state={pizza} name="Pizzas" />

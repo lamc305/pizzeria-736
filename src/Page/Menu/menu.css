@@ -34,6 +34,7 @@ html {
   margin-top: 0;
   line-height: 23px;
 }
+
 .header__menu div p:last-child {
   margin-top: 0;
 }
@@ -46,6 +47,12 @@ html {
 .tabs__cartIcon {
   color: var(--colorHeading);
   font-size: 4rem;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs__menu {

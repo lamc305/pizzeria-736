@@ -4,7 +4,7 @@ import { TYPES } from '../../../action/actionReducer'
 import { useContext } from 'react'
 import { ReducerContext } from '../../../contexto/reducerContext'
 
-function CardPizza({ price, name, id, description, image, quantity }) {
+function CardPizza({ price, name, id, description, image, quantity, inCart }) {
 
   const { dispatch } = useContext(ReducerContext)
 
@@ -24,7 +24,7 @@ function CardPizza({ price, name, id, description, image, quantity }) {
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus quantity={quantity} id={id} />
-        <button className='item__buttons--right' onClick={() => addToCart(id)}>Pedir</button>
+        <button className={`item__buttons--right ${inCart ? 'inCart' : null} `} onClick={() => addToCart(id)}>{inCart ? 'Pedido' : 'Pedir'}</button>
       </div>
     </div>
   )
