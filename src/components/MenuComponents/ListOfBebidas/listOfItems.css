@@ -7,7 +7,7 @@
 
 .ListOfItems__header {
   width: 90vw;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto
 }
 
@@ -19,7 +19,7 @@
 
 .ListOfItems__header div {
   width: 90vw;
-  max-width: 1280px;
+  max-width: 1440px;
   margin-top: 5px;
   height: 1px;
   background-color: var(--tabsActive);

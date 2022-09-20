@@ -12,17 +12,30 @@ html {
 .header__menu {
   display: flex;
   width: 90vw;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 60px auto;
   height: 200px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
-.header__menu h1 {
-  font-size: 11rem;
+.header__menu div h1 {
+  font-size: 9rem;
   color: var(--colorHeading);
   font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.header__menu div p {
+  font-size: 2rem;
+  font-family: Roboto;
+  font-weight: 400;
+  margin-top: 0;
+  line-height: 23px;
+}
+.header__menu div p:last-child {
+  margin-top: 0;
 }
 
 .header__menu img {
@@ -38,7 +51,7 @@ html {
 .tabs__menu {
   display: flex;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto 25px;
   justify-content: space-evenly;
   background-color: var(--tabsContent);
@@ -64,25 +77,32 @@ a {
   border-bottom: 5px solid #A0BED9;
 }
 
-
 .producto {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
   width: 90vw;
   max-width: 1280px;
-  margin: 30px auto;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 950px) {
 
   .header__menu {
-    height: 160px;
+    height: 150px;
     margin-top: 50px;
   }
 
-  .header__menu h1 {
-    font-size: 8rem;
+  .header__menu div h1 {
+    font-size: 6rem;
+  }
+
+  .header__menu div p {
+    font-size: 1.7rem;
   }
 
   .header__menu img {
@@ -109,8 +129,12 @@ a {
     margin-top: 40px;
   }
 
-  .header__menu h1 {
+  .header__menu div h1 {
     font-size: 5rem;
+  }
+
+  .header__menu div p {
+    font-size: 1.5rem;
   }
 
   .header__menu img {
@@ -130,7 +154,8 @@ a {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 560px) {
+
   .header__menu {
     height: 120px;
     margin-top: 30px;
@@ -148,8 +173,13 @@ a {
     font-size: 1.5rem;
   }
 
-  .header__menu h1 {
+  .header__menu div h1 {
     font-size: 4rem;
+  }
+
+  .header__menu div p {
+    font-size: 1.4rem;
+    max-width: 250px;
   }
 
   .header__menu img {
@@ -176,8 +206,8 @@ a {
     font-size: 1.5rem;
   }
 
-  .header__menu h1 {
-    font-size: 4rem;
+  .header__menu div h1 {
+    font-size: 3rem;
   }
 
   .header__menu img {
@@ -204,8 +234,13 @@ a {
     font-size: 1rem;
   }
 
-  .header__menu h1 {
+  .header__menu div h1 {
     font-size: 2.5rem;
+  }
+
+  .header__menu div p {
+    font-size: 1rem;
+    max-width: 150px;
   }
 
   .header__menu img {
