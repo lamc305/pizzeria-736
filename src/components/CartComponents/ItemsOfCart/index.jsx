@@ -25,7 +25,7 @@ function ItemsOfCart({ name, price, description, image, quantity, id }) {
         <ButtonPlusMinusCart quantity={quantity} id={id} />
       </div>
       <div className='carrito__priceTrash'>
-        <h2>${price}</h2>
+        <h2>${price * quantity}</h2>
         <button onClick={() => deleteItem(id)}>
           <HiOutlineTrash />
         </button>
