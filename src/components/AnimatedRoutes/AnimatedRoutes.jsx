@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import SpinnerWait from "../Spinner";
 
-const Home = lazy(() => import('../../Page/Home'))
 const Menu = lazy(() => import('../../Page/Menu'))
 const Cart = lazy(() => import('../../Page/Cart'))
 function AnimatedRoutes() {
@@ -13,8 +12,7 @@ function AnimatedRoutes() {
     <AnimatePresence location={location} key={location.pathname}>
       <Suspense fallback={<SpinnerWait />}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/" element={<Menu />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Suspense>

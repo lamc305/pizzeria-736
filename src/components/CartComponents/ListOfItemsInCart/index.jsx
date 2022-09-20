@@ -13,7 +13,8 @@ function ListOfItemsInCart() {
   return (
 
     <section className='itemsOfCart__container'>
-      <Link to='/menu'>
+      <Link to='/'>
+        Volver al menú
         <button className='itemOfCart__button'><HiPlus /></button>
       </Link>
       {cart.length === 0 ? <h2 className='itemsOfCart__empty'>There is no products</h2> : cart.map(({ name, price, description, image, quantity, id }) => (

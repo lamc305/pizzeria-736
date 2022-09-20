@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { ModalContexto } from "../../../contexto/modalContext";
+import { ReducerContext } from "../../../contexto/reducerContext";
 import "./form.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-function FormEnvio() {
+function FormEnvio({ name, description, quantity }) {
 
   const data = useContext(ModalContexto)
   const { setIsOpen } = data
@@ -17,6 +18,7 @@ function FormEnvio() {
   return (
     <>
       <Formik
+
         initialValues={{
           calle: '',
           numero: '',
@@ -73,7 +75,8 @@ function FormEnvio() {
         }}
       >
         {({ errors }) => (
-          <Form className="container__form">
+          < Form className="container__form">
+
             <div className="form" >
               <label className="form__title">¿A donde llevamos el pedido?</label>
               <div className="calle">
@@ -185,13 +188,15 @@ function FormEnvio() {
               </div>
 
               <div className="container__orderFinish">
-                <button type="submit" className="btn__order" onClick={handleState}>Concreta tu pedido</button>
+                <a href={`https://wa.me/5124234234234234?text=Hola,%20me%20interesa%20${quantity}%20${name}% 20de%20${description}.`}><button type="submit" className="btn__order" onClick={handleState}>Concreta tu pedido</button></a>
+
                 <p className="paragraph">El pago es unicamente en efectivo. <br />
                   Al concretar el pedido te llegará el contacto al whatsapp. </p>
                 <p className="text__modified2">¡Gracias!</p>
               </div>
             </div>
           </Form>
+
         )}
       </Formik>
     </>

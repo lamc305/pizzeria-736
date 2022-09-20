@@ -4,12 +4,13 @@
 
 .container__form {
     width: 90vw;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     padding-top: 18px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 80px;
 }
 
 .form {
@@ -125,7 +126,7 @@
     font-size: 14px;
     color: #2B303A;
     position: relative;
-    top: 8px;
+    top: 5px;
     left: 12px;
     width: fit-content;
 }
@@ -156,7 +157,6 @@
 .text__price {
     text-align: center;
     font-family: 'Inter', sans-serif;
-    padding: 6px 0;
 }
 
 .container__subTotal input {
@@ -184,7 +184,6 @@
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-    padding: 10px;
     grid-column: 1/2;
 }
 
@@ -195,7 +194,6 @@
     font-weight: 700;
     font-size: 20px;
     color: var(--orange);
-    padding: 10px;
     grid-column: 2/3;
 }
 
@@ -356,7 +354,6 @@
 
     .form__title2 {
         font-size: 10px;
-        top: 6px;
     }
 
     .form__texto {
@@ -396,7 +393,6 @@
     .text__price2,
     .text__modified2 {
         font-size: 15px;
-        padding: 10px 0;
     }
 
     .btn__order {

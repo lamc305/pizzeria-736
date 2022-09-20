@@ -2,7 +2,6 @@ import ListOfItemsInCart from "../../components/CartComponents/ListOfItemsInCart
 import './cart.css'
 import FormEnvio from '../../components/CartComponents/FormEnvio'
 import logo from '../../assets/logo.jpg'
-import ButtonWhatsapp from "../../components/HomeComponents/ButtonWhatsapp"
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
 import Modal from "../../components/CartComponents/Modal"
@@ -33,7 +32,6 @@ function Cart() {
         </div>
         <ListOfItemsInCart />
         <FormEnvio />
-        <ButtonWhatsapp />
       </ModalContextProvider>
     </motion.div>
   )

@@ -44,9 +44,7 @@ function Menu() {
       <div>
         <header className='header__menu'>
           <h1>Don Remolo</h1>
-          <Link to='/' className='header__logo'>
-            <img className='header__logo' src={logo} alt="logo" />
-          </Link>
+          <img className='header__logo' src={logo} alt="logo" />
         </header>
       </div>
       <div className='tabs__menu'>
