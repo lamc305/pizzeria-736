@@ -1,7 +1,7 @@
 .item__list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-bottom: 10px;
   padding-left: 0px;
   border-bottom: 0.5px #A4BFDF solid;
@@ -30,5 +30,5 @@
   .item__list li {
     width: 60px;
     font-size: 1.4rem;
-}
+  }
 }

@@ -16,11 +16,9 @@
   object-fit: contain;
   min-width: 200px;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   height: auto;
   flex-direction: column;
-  margin: 20px;
-  margin-bottom: 48px;
   border-radius: 10px;
   padding: 22px 22px 29px 22px;
 }
@@ -42,7 +40,7 @@
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 7px;
-  line-height: 16.41px
+  line-height: 16.41px;
 }
 
 .item__header--text {
@@ -95,7 +93,7 @@
   transform: translateY(2px)
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:560px) {
   .item__header h2 {
     font-size: 2rem;
   }
@@ -115,7 +113,7 @@
     width: 100%;
     max-width: 250px;
     margin: 20px;
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
   .item__buttons--right {
