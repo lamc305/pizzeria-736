@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ModalContexto } from "../../../contexto/modalContext";
-import { ReducerContext } from "../../../contexto/reducerContext";
 import "./form.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
