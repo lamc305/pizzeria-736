@@ -5,7 +5,7 @@ export const ModalContexto = createContext()
 
 function ModalContextProvider({ children }) {
 
-  const [isOpen, setIsOpen] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
   const data = { isOpen, setIsOpen }
 
   return (
