@@ -129,7 +129,7 @@ a {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 822px) {
 
   .header__menu {
     height: 150px;
@@ -158,6 +158,12 @@ a {
 
   .tabs__menu--active {
     font-size: 2rem;
+  }
+
+  .producto {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 360px);
+    justify-content: center;
   }
 }
 

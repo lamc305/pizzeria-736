@@ -7,8 +7,9 @@ function ListOfPizza({ state, name }) {
     <>
       {state && <>
         {name &&
-          <div className="ListOfItems__pizza">
-            <div id={name}></div>
+          <div className="ListOfItems__header">
+            <h2 id={name}>{name}</h2>
+            <div></div>
           </div>
         }
         <section className='producto'>

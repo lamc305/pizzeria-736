@@ -106,6 +106,13 @@
     width: 100%;
 }
 
+.form__input--separate::placeholder {
+    font-style: normal;
+    color: #2B303A;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .error {
     font-size: 14px;
     color: var(--orange);
@@ -380,7 +387,7 @@
 
     .container__pay {
         position: relative;
-        bottom: 490px;
+        bottom: 500px;
         border-bottom: 2px solid #9dbbdf;
     }
 
@@ -422,10 +429,6 @@
 
     .container__texto {
         padding-bottom: 7px;
-    }
-
-    .container__pay {
-        bottom: 475px;
     }
 
     .btn__order {
