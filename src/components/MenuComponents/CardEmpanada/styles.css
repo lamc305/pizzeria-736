@@ -17,7 +17,7 @@
   min-width: 200px;
   width: 100%;
   max-width: 320px;
-  height: auto;
+  height: 90%;
   flex-direction: column;
   border-radius: 10px;
   padding: 22px 22px 29px 22px;
@@ -111,9 +111,8 @@
   .item {
     min-width: 200px;
     width: 100%;
-    max-width: 250px;
-    margin: 20px;
-    margin-bottom: 0;
+    max-width: 215px;
+    margin: 0 auto;
   }
 
   .item__buttons--right {

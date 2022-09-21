@@ -1,6 +1,7 @@
 .carrito {
   display: grid;
   grid-template-areas: "img text button price";
+  grid-template-columns: 1fr 2fr 1fr 1fr;
   width: 90vw;
   margin: 0 auto;
   max-width: 1440px;
@@ -32,6 +33,7 @@
 .carrito__text {
   grid-area: text;
   min-width: 10vw;
+  margin-left: 10px;
 }
 
 .carrito__text h2 {
@@ -126,12 +128,22 @@
   }
 }
 
-@media screen and (max-width:590px) {
+@media screen and (max-width:720px) {
+  .carrito__text h2 {
+    font-size: 2rem;
+  }
+
+  .carrito__text p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width:605px) {
   .carrito {
     grid-template-areas: "img text text"
       "button space price";
     width: 90vw;
-    height: 135px;
+    height: 145px;
     padding-bottom: 25px;
     padding-top: 20px;
   }
@@ -149,7 +161,7 @@
   .carrito__priceTrash {
     justify-content: space-between;
     width: 40vw;
-    padding-left: 20vw;
+    padding-left: 10vw;
   }
 
   .carrito__priceTrash h2 {
@@ -159,10 +171,6 @@
 
   .carrito__Buttons {
     padding-left: 12px;
-  }
-
-  .carrito__text {
-    padding-left: 15px;
   }
 
   .carrito__text h2 {
@@ -177,4 +185,20 @@
   }
 }
 
-@media screen and (max-width: 360px) {}
+@media screen and (max-width: 325px) {
+  .carrito {
+    grid-template-areas:
+      "img text"
+      "button price";
+    height: 22vh;
+    padding-bottom: 18px;
+  }
+
+  .carrito__text h2 {
+    font-size: 1.7rem;
+  }
+
+  .carrito__priceTrash h2 {
+    font-size: 1.6rem;
+  }
+}
