@@ -1,12 +1,18 @@
 import { useContext } from "react";
 import { ModalContexto } from "../../../contexto/modalContext";
+import { ReducerContext } from "../../../contexto/reducerContext";
+
 import "./form.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 function FormEnvio({ name, description, quantity }) {
 
   const data = useContext(ModalContexto)
+  const { state } = useContext(ReducerContext)
   const { setIsOpen } = data
+  const { cart } = state
+  const totalCount = cart.map(res => res.quantity * res.price).reduce((acc, sum) => acc + sum, 0)
+
 
   const handleState = () => {
     setIsOpen('is_open')
@@ -171,7 +177,7 @@ function FormEnvio({ name, description, quantity }) {
               <div className="container__pay">
                 <div className="container__subTotal">
                   <p className="text__order">Subtotal</p>
-                  <p className="text__price">$1630</p>
+                  <p className="text__price">${totalCount}</p>
                   <Field
                     type="text"
                     id="descuento"
@@ -181,7 +187,7 @@ function FormEnvio({ name, description, quantity }) {
                 </div>
                 <div className="container__total">
                   <p className="text__modified">Total</p>
-                  <p className="text__price2">$1630</p>
+                  <p className="text__price2">${totalCount}</p>
                 </div>
 
               </div>

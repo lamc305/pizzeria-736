@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { ReducerContext } from '../../../contexto/reducerContext'
 import { TYPES } from '../../../action/actionReducer'
 
-function ItemsOfCart({ name, price, description, image, quantity, id }) {
+function ItemsOfCart({ name, price, description, img, quantity, id }) {
 
   const { dispatch } = useContext(ReducerContext)
   const deleteItem = (id) => {
@@ -15,7 +15,7 @@ function ItemsOfCart({ name, price, description, image, quantity, id }) {
   return (
     <div className='carrito' >
       <div className='carrito__image'>
-        <img src={image} loading='lazy' alt="product" />
+        <img src={img} loading='lazy' alt="product" />
       </div>
       <div className="carrito__text">
         <h2>{name}</h2>

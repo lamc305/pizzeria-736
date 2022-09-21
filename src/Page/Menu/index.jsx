@@ -12,17 +12,22 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react';
 import { getProducts } from '../../services/getItems';
 import { TYPES } from '../../action/actionReducer';
-
+import { ModalContexto } from '../../contexto/modalContext'
+import ModalMenu from '../../components/MenuComponents/ModalMenu';
 function Menu() {
 
   const { dispatch, pizza, empanada, bebida, postre, state } = useContext(ReducerContext)
   const [toggleList, setToggleList] = useState("#")
-
+  const data = useContext(ModalContexto)
+  const { setIsOpen } = data
 
   const handleClass = (index) => {
     setToggleList(index)
   }
-
+  const handleVisibility = () => {
+    setIsOpen(true)
+    setTimeout(() => setIsOpen(false), 2000)
+  }
 
   useEffect(() => {
     getProducts().then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
@@ -60,11 +65,16 @@ function Menu() {
         <div><a href='#Postres' className={toggleClass2} onClick={() => handleClass('#Postres')}>Postres</a></div>
         <div><a href='#Bebidas' className={toggleClass3} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
         <div className='iconContainer'>
-          <Link to='/cart' className='tabs__cartIcon'>
-            <span>{state.cart.length > 0 ? state.cart.length : null}</span>
-            <FaCartArrowDown />
-          </Link>
+          {state.cart.length === 0 ?
+            <div className='tabs__cartIcon' onClick={handleVisibility}>
+              <FaCartArrowDown />
+            </div> :
+            <Link to='/cart' className='tabs__cartIcon'>
+              <span>{state.cart.length > 0 ? state.cart.length : null}</span>
+              <FaCartArrowDown />
+            </Link>}
         </div>
+        <ModalMenu />
       </div>
 
       <ListOfPizza state={pizza} name="Pizzas" />

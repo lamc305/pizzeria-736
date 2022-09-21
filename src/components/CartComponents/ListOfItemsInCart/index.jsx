@@ -17,14 +17,14 @@ function ListOfItemsInCart() {
         Volver al menú
         <button className='itemOfCart__button'><HiPlus /></button>
       </Link>
-      {cart.length === 0 ? <h2 className='itemsOfCart__empty'>There is no products</h2> : cart.map(({ name, price, description, image, quantity, id }) => (
+      {cart.length === 0 ? <h2 className='itemsOfCart__empty'>There is no products</h2> : cart.map(({ name, price, description, img, quantity, id }) => (
         <ItemsOfCart
           key={id}
           id={id}
           name={name}
           description={description}
           price={price}
-          image={image}
+          img={img}
           quantity={quantity}
         />
       ))

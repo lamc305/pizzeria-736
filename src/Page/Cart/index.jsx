@@ -2,13 +2,16 @@ import ListOfItemsInCart from "../../components/CartComponents/ListOfItemsInCart
 import './cart.css'
 import FormEnvio from '../../components/CartComponents/FormEnvio'
 import logo from '../../assets/logo.jpg'
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import { motion } from 'framer-motion'
-import Modal from "../../components/CartComponents/Modal"
-import { useEffect } from "react"
+import Modal from "../../components/CartComponents/ModalCart"
+import { useContext, useEffect } from "react"
 import ModalContextProvider from "../../contexto/modalContext"
+import { ReducerContext } from "../../contexto/reducerContext"
 
 function Cart() {
+
+  const { state } = useContext(ReducerContext)
 
   useEffect(() => {
     window.scroll({
@@ -16,6 +19,8 @@ function Cart() {
       behavior: 'smooth'
     })
   }, [])
+
+  if (state.cart.length === 0) return <Navigate to='/' />
   return (
     <motion.div
       initial={{ opacity: 0 }}
