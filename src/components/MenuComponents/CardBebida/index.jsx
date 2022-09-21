@@ -3,7 +3,7 @@ import { ReducerContext } from '../../../contexto/reducerContext'
 import { TYPES } from '../../../action/actionReducer'
 import '../CardEmpanada/styles.css'
 import ButtonPlusMinus from '../ButtonPlusMinus'
-function CardBebida({ description, name, id, price, image, quantity, inCart }) {
+function CardBebida({ description, name, id, price, img, quantity, inCart }) {
 
   const { dispatch } = useContext(ReducerContext)
   const addToCart = (id) => {
@@ -18,7 +18,7 @@ function CardBebida({ description, name, id, price, image, quantity, inCart }) {
           <h2>${price}</h2>
         </div>
         <h3>{description}</h3>
-        <img className='item__image' loading='lazy' src={image} alt={name} />
+        <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus quantity={quantity} id={id} />

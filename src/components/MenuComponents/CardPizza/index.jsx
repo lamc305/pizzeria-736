@@ -4,7 +4,7 @@ import { TYPES } from '../../../action/actionReducer'
 import { useContext } from 'react'
 import { ReducerContext } from '../../../contexto/reducerContext'
 
-function CardPizza({ price, name, id, description, image, quantity, inCart }) {
+function CardPizza({ price, name, id, description, img, quantity, inCart }) {
 
   const { dispatch } = useContext(ReducerContext)
 
@@ -20,7 +20,7 @@ function CardPizza({ price, name, id, description, image, quantity, inCart }) {
         </div>
         <h3>{description}</h3>
         <h2 className='item__price'>${price}</h2>
-        <img className='item__image' loading='lazy' src={image} alt={name} />
+        <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus quantity={quantity} id={id} />
