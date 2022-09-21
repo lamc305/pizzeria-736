@@ -1,4 +1,4 @@
-const URL = 'https://apipizzeria.herokuapp.com/products'
+const URL = 'https://pizzeriawebapi.herokuapp.com/api/products'
 
 export function getProducts() {
   return fetch(URL)
