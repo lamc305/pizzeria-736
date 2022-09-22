@@ -24,7 +24,7 @@ function Modal() {
         transition={{ duration: 2 }}
       >
         <button className='modal__button'>X</button>
-        <p>Tu pedido ya ha sido concretado a la brevedad recibiras un whatsapp de Don Remolo.</p>
+        <p>Tu pedido ya ha sido concretado, a la brevedad recibiras un whatsapp de Don Remolo.</p>
         <div className='modal__footer'>
           <p>¡Gracias por confiar en nosotros!</p>
           <img src={logo} className='modal__logo' alt="" />
