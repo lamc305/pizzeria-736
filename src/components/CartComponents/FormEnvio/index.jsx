@@ -4,8 +4,9 @@ import { ReducerContext } from "../../../contexto/reducerContext";
 
 import "./form.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import UseWhatsapp from "../../../hooks/useWhatsapp";
 
-function FormEnvio({ name, description, quantity }) {
+function FormEnvio() {
 
   const data = useContext(ModalContexto)
   const { state } = useContext(ReducerContext)
@@ -13,16 +14,9 @@ function FormEnvio({ name, description, quantity }) {
   const { cart } = state
   const totalCount = cart.map(res => res.quantity * res.price).reduce((acc, sum) => acc + sum, 0)
 
-
-  const handleState = () => {
-    setIsOpen('is_open')
-  }
-
-
   return (
     <>
       <Formik
-
         initialValues={{
           calle: '',
           numero: '',
@@ -33,53 +27,69 @@ function FormEnvio({ name, description, quantity }) {
           texto: '',
           descuento: ''
         }}
-        validate={(valores) => {
+        validate={(values) => {
           let errores = {}
 
           //validacion calle
-          if (!valores.calle) {
+          if (!values.calle) {
             errores.calle = 'Por favor ingresa una calle'
           }
 
           //validacion numero
-          if (!valores.numero) {
+          if (!values.numero) {
             errores.numero = 'Por favor ingresa un numero'
             // eslint-disable-next-line no-useless-escape
-          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(valores.numero)) {
+          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(values.numero)) {
             errores.numero = 'Numero incorrecto'
           }
 
           //validacion piso
-          if (!valores.piso) {
+          if (!values.piso) {
             errores.piso = 'Por favor ingresa un piso'
           }
 
           //validacion celular
-          if (!valores.celular) {
+          if (!values.celular) {
             errores.celular = 'Por favor ingresa un numero celular'
             // eslint-disable-next-line no-useless-escape
-          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(valores.celular)) {
+          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(values.celular)) {
             errores.celular = 'Numero de celular incorrecto'
           }
           //validacion codigo postal
-          if (!valores.codigoPostal) {
+          if (!values.codigoPostal) {
             errores.codigoPostal = 'Por favor ingresa una calle'
-          } else if (!/[0-9]$/.test(valores.codigoPostal)) {
+          } else if (!/[0-9]$/.test(values.codigoPostal)) {
             errores.codigoPostal = 'Codigo postal incorrecto'
           }
 
           //validacion departamento
-          if (!valores.departamento) {
+          if (!values.departamento) {
             errores.departamento = 'Por favor ingresa el departamento'
           }
           return errores;
         }}
-        onSubmit={(valores, { resetForm }) => {
-          resetForm()
+        onSubmit={(valores) => {
+          setIsOpen('is_open')
+          const cartProducts = cart.map(({ name, price, quantity }) => {
+            const text = `${name} x ${quantity} = $${price * quantity}`
+            return text
+          })
+          const message =
+            `Hola, estoy interesado en los siguientes productos:
+          Productos: ${cartProducts}`
+          setTimeout(() => UseWhatsapp('55454545454545', message), 1500
+          )
         }}
+
       >
-        {({ errors }) => (
-          < Form className="container__form">
+        {({
+          values,
+          errors,
+          handleChange,
+          handleSubmit,
+          handleBlur
+        }) => (
+          <Form className="container__form" onSubmit={handleSubmit}>
 
             <div className="form" >
               <label className="form__title">¿A donde llevamos el pedido?</label>
@@ -88,6 +98,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="calle"
                   name="calle"
+                  value={values.calle}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   className="form__input--long"
                   placeholder="Calle"
                 />
@@ -101,6 +114,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="numero"
                   name="numero"
+                  value={values.numero}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
                   className="form__input"
                   placeholder="Numero"
                 />
@@ -114,6 +130,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="piso"
                   name="piso"
+                  value={values.piso}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
                   className="form__input"
                   placeholder="Piso"
                 />
@@ -127,6 +146,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="celular"
                   name="celular"
+                  value={values.celular}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
                   className="form__input"
                   placeholder="Celular"
                 />
@@ -140,6 +162,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="codigoPostal"
                   name="codigoPostal"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.codigoPostal}
                   className=" form__input--separate"
                   placeholder="Código postal"
                 />
@@ -153,6 +178,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="departamento"
                   name="departamento"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.departamento}
                   className=" form__input--separate"
                   placeholder="Departamento"
                 />
@@ -167,6 +195,9 @@ function FormEnvio({ name, description, quantity }) {
                   type="text"
                   id="texto"
                   name="texto"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.texto}
                   className="form__texto"
                 />
               </div>
@@ -181,6 +212,9 @@ function FormEnvio({ name, description, quantity }) {
                     type="text"
                     id="descuento"
                     name="descuento"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    value={values.descuento}
                     placeholder="Código de descuento"
                   />
                 </div>
@@ -192,8 +226,7 @@ function FormEnvio({ name, description, quantity }) {
               </div>
 
               <div className="container__orderFinish">
-                <a href={`https://wa.me/5124234234234234?text=Hola,%20me%20interesa%20${quantity}%20${name}% 20de%20${description}.`}><button type="submit" className="btn__order" onClick={handleState}>Concreta tu pedido</button></a>
-
+                <button type="submit" className="btn__order">Concreta tu pedido</button>
                 <p className="paragraph">El pago es unicamente en efectivo. <br />
                   Al concretar el pedido te llegará el contacto al whatsapp. </p>
                 <p className="text__modified2">¡Gracias!</p>
