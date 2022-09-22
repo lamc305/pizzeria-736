@@ -149,6 +149,7 @@ a {
   }
 
   .tabs__menu {
+    padding-top: 15px;
     font-size: 2rem;
   }
 
@@ -174,18 +175,6 @@ a {
     margin-top: 30px;
   }
 
-  .tabs__menu {
-    font-size: 1.5rem;
-  }
-
-  .tabs__menu--active {
-    font-size: 1.5rem;
-  }
-
-  .tabs__cartIcon {
-    font-size: 1.5rem;
-  }
-
   .header__menu div h1 {
     font-size: 4rem;
   }
@@ -201,7 +190,7 @@ a {
 
 }
 
-@media screen and (max-widht: 360px) {
+@media screen and (max-width: 395px) {
   .header__menu {
     height: 100px;
     margin-top: 25px;
@@ -236,15 +225,15 @@ a {
   }
 
   .tabs__menu {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .tabs__menu--active {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .tabs__cartIcon {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .header__menu div h1 {
