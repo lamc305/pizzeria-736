@@ -1,6 +1,7 @@
 import { TYPES } from "../action/actionReducer"
 
 export const initialStateApp = {
+  isLoading: true,
   products: null,
   cart: []
 }
@@ -10,6 +11,7 @@ export const appReducer = (state, action) => {
     case TYPES.CALL_API:
       return state.products === null ? {
         ...state,
+        isLoading: false,
         products:
           action.payload
       } : {

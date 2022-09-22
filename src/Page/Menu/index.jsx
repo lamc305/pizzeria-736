@@ -14,6 +14,7 @@ import { getProducts } from '../../services/getItems';
 import { TYPES } from '../../action/actionReducer';
 import { ModalContexto } from '../../contexto/modalContext'
 import ModalMenu from '../../components/MenuComponents/ModalMenu';
+import { SpinnerMenu } from '../../components/Spinner';
 function Menu() {
 
   const { dispatch, pizza, empanada, bebida, postre, state } = useContext(ReducerContext)
@@ -76,11 +77,16 @@ function Menu() {
         </div>
         <ModalMenu />
       </div>
-
-      <ListOfPizza state={pizza} name="Pizzas" />
-      <ListOfEmpanadas state={empanada} name='Empanadas' />
-      <ListOfBebidas state={bebida} name='Bebidas' />
-      <ListOfBebidas state={postre} name='Postres' />
+      {state.isLoading === true ?
+        <SpinnerMenu />
+        :
+        <>
+          <ListOfPizza state={pizza} name="Pizzas" />
+          <ListOfEmpanadas state={empanada} name='Empanadas' />
+          <ListOfBebidas state={bebida} name='Bebidas' />
+          <ListOfBebidas state={postre} name='Postres' />
+        </>
+      }
     </motion.div>
   )
 }
