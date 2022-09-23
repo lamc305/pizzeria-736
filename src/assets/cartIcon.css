@@ -1,0 +1,11 @@
+.cartIcon__container {
+  max-width: 40px;
+  max-height: 36px;
+}
+
+@media screen and (max-width: 822px) {
+  .cartIcon__container {
+    max-width: 34px;
+    max-height: 18px;
+  }
+}
