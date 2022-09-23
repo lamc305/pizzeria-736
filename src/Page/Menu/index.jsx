@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import logo from '../../assets/logo.jpg'
-import { FaCartArrowDown } from 'react-icons/fa';
 import './menu.css'
 import { useContext, useState } from 'react';
 import ListOfBebidas from '../../components/MenuComponents/ListOfBebidas';
@@ -15,11 +14,17 @@ import { TYPES } from '../../action/actionReducer';
 import { ModalContexto } from '../../contexto/modalContext'
 import ModalMenu from '../../components/MenuComponents/ModalMenu';
 import { SpinnerMenu } from '../../components/Spinner';
+import CartIcon from '../../assets/CartIcon';
+import { useInView } from 'react-intersection-observer';
 function Menu() {
 
   const { dispatch, pizza, empanada, bebida, postre, state } = useContext(ReducerContext)
   const [toggleList, setToggleList] = useState("#")
   const data = useContext(ModalContexto)
+  const [ref, inView] = useInView()
+  const [ref2, inView2] = useInView()
+  const [ref3, inView3] = useInView()
+  const [ref4, inView4] = useInView()
   const { setIsOpen } = data
 
   const handleClass = (index) => {
@@ -32,7 +37,11 @@ function Menu() {
 
   useEffect(() => {
     getProducts().then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
-  }, [dispatch, state.product])
+    if (inView) setToggleList('#')
+    if (inView2) setToggleList('#Empanadas')
+    if (inView3) setToggleList('#Bebidas')
+    if (inView4) setToggleList('#Postres')
+  }, [dispatch, state.product, inView, inView2, inView3, inView4])
 
   const toggleClass1 = toggleList === '#Empanadas' ? 'tabs__menu--active' : null
   const toggleClass2 = toggleList === '#Postres' ? 'tabs__menu--active' : null
@@ -68,11 +77,11 @@ function Menu() {
         <div className='iconContainer'>
           {state.cart.length === 0 ?
             <div className='tabs__cartIcon' onClick={handleVisibility}>
-              <FaCartArrowDown />
+              <CartIcon />
             </div> :
             <Link to='/cart' className='tabs__cartIcon'>
               <span>{state.cart.length > 0 ? state.cart.length : null}</span>
-              <FaCartArrowDown />
+              <CartIcon />
             </Link>}
         </div>
         <ModalMenu />
@@ -81,10 +90,10 @@ function Menu() {
         <SpinnerMenu />
         :
         <>
-          <ListOfPizza state={pizza} name="Pizzas" />
-          <ListOfEmpanadas state={empanada} name='Empanadas' />
-          <ListOfBebidas state={bebida} name='Bebidas' />
-          <ListOfBebidas state={postre} name='Postres' />
+          <ListOfPizza state={pizza} name="Pizzas" referencia={ref} />
+          <ListOfEmpanadas state={empanada} name='Empanadas' referencia={ref2} />
+          <ListOfBebidas state={bebida} name='Bebidas' referencia={ref3} />
+          <ListOfBebidas state={postre} name='Postres' referencia={ref4} />
         </>
       }
     </motion.div>

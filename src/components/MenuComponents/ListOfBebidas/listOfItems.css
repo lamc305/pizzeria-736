@@ -1,8 +1,5 @@
-:root {
-  --colorHeading: #E74524;
-  --itemInfo: #F3F2F3;
-  --tabsContent: #F3F5FB;
-  --tabsActive: #A4BFDF;
+.ListOfItems__container {
+  min-height: 100vh;
 }
 
 .ListOfItems__header {
@@ -12,17 +9,18 @@
 }
 
 .ListOfItems__header h2 {
-  color: var(--colorHeading);
+  color: #E74423;
   font-size: 4rem;
   margin-bottom: 10px;
+  font-family: Jost;
+  font-weight: 700;
 }
 
 .ListOfItems__header div {
   width: 90vw;
   max-width: 1440px;
   margin-top: 5px;
-  height: 1px;
-  background-color: var(--tabsActive);
+  border: 1px solid #A4BFDF;
 }
 
 @media screen and (max-width: 460px) {
