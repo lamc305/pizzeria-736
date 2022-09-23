@@ -115,13 +115,9 @@
 }
 
 .input input:focus~.form__label,
-.input input:valid~.form__label {
+.input input:not(:placeholder-shown)~.form__label {
     top: 0;
     font-size: 1rem;
-}
-
-.input input:active {
-    background: transparent;
 }
 
 .error {
