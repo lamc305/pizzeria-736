@@ -35,29 +35,9 @@ function FormEnvio() {
             errores.calle = 'Por favor ingresa una calle'
           }
 
-          //validacion numero
-          if (!values.numero) {
-            errores.numero = 'Por favor ingresa un numero'
-            // eslint-disable-next-line no-useless-escape
-          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(values.numero)) {
-            errores.numero = 'Numero incorrecto'
-          }
-
-          //validacion piso
-          if (!values.piso) {
-            errores.piso = 'Por favor ingresa un piso'
-          }
-
-          //validacion celular
-          if (!values.celular) {
-            errores.celular = 'Por favor ingresa un numero celular'
-            // eslint-disable-next-line no-useless-escape
-          } else if (!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(values.celular)) {
-            errores.celular = 'Numero de celular incorrecto'
-          }
           //validacion codigo postal
           if (!values.codigoPostal) {
-            errores.codigoPostal = 'Por favor ingresa una calle'
+            errores.codigoPostal = 'Por favor ingresa el codigo postal'
           } else if (!/[0-9]$/.test(values.codigoPostal)) {
             errores.codigoPostal = 'Codigo postal incorrecto'
           }
@@ -93,7 +73,7 @@ function FormEnvio() {
 
             <div className="form" >
               <label className="form__title">¿A donde llevamos el pedido?</label>
-              <div className="calle">
+              <div className="input calle">
                 <Field
                   type="text"
                   id="calle"
@@ -102,13 +82,14 @@ function FormEnvio() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className="form__input--long"
-                  placeholder="Calle"
+                  required
                 />
+                <label className="form__label">Calle</label>
                 <ErrorMessage name="calle" component={() => (
                   <div className="error">{errors.calle}</div>
                 )} />
               </div>
-              <div className="numero">
+              <div className="input numero">
 
                 <Field
                   type="text"
@@ -118,13 +99,14 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  placeholder="Numero"
+                  required
                 />
+                <label className="form__label">Numero</label>
                 <ErrorMessage name="numero" component={() => (
                   <div className="error">{errors.numero}</div>
                 )} />
               </div>
-              <div className="piso">
+              <div className="input piso">
 
                 <Field
                   type="text"
@@ -134,13 +116,14 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  placeholder="Piso"
+                  required
                 />
+                <label className="form__label">Piso</label>
                 <ErrorMessage name="piso" component={() => (
                   <div className="error">{errors.piso}</div>
                 )} />
               </div>
-              <div className="celular">
+              <div className="input celular">
 
                 <Field
                   type="text"
@@ -150,14 +133,15 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  placeholder="Celular"
+                  required
                 />
+                <label className="form__label">Celular</label>
                 <ErrorMessage name="celular" component={() => (
                   <div className="error">{errors.celular}</div>
                 )} />
               </div>
 
-              <div className="postal">
+              <div className="input postal">
                 <Field
                   type="text"
                   id="codigoPostal"
@@ -166,14 +150,15 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   value={values.codigoPostal}
                   className=" form__input--separate"
-                  placeholder="Código postal"
+                  required
                 />
+                <label className="form__label">Código postal</label>
                 <ErrorMessage name="codigoPostal" component={() => (
                   <div className="error">{errors.codigoPostal}</div>
                 )} />
 
               </div>
-              <div className="departamento">
+              <div className="input departamento">
                 <Field
                   type="text"
                   id="departamento"
@@ -182,8 +167,9 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   value={values.departamento}
                   className=" form__input--separate"
-                  placeholder="Departamento"
+                  required
                 />
+                <label className="form__label">Departamento</label>
                 <ErrorMessage name="departamento" component={() => (
                   <div className="error">{errors.departamento}</div>
                 )} />
