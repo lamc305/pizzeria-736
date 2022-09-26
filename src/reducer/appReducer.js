@@ -78,8 +78,7 @@ export const appReducer = (state, action) => {
         ;
     }
     case TYPES.ADD_ONE_IN_CART: {
-      let item = state.cart.find(
-        (product) => product.id === action.payload);
+      let item = state.cart.find(product => product.id === action.payload);
       let newItem = state.cart.find(product => product.quantity >= item.quantity)
       return newItem ?
         {
@@ -117,7 +116,7 @@ export const appReducer = (state, action) => {
       let item = state.cart.find(res => res.id === action.payload)
       return {
         products: state.products.map(res => (
-          res.id === item.id ? { ...res, inCart: false, quantity: 0 } : res
+          res.id === item.id ? { ...res, inCart: false } : res
         )),
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
