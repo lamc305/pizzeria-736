@@ -82,7 +82,7 @@ function FormEnvio() {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className="form__input--long"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Calle</label>
                 <ErrorMessage name="calle" component={() => (
@@ -99,7 +99,7 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Numero</label>
                 <ErrorMessage name="numero" component={() => (
@@ -116,7 +116,7 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Piso</label>
                 <ErrorMessage name="piso" component={() => (
@@ -133,7 +133,7 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   className="form__input"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Celular</label>
                 <ErrorMessage name="celular" component={() => (
@@ -150,7 +150,7 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   value={values.codigoPostal}
                   className=" form__input--separate"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Código postal</label>
                 <ErrorMessage name="codigoPostal" component={() => (
@@ -167,7 +167,7 @@ function FormEnvio() {
                   onBlur={handleBlur}
                   value={values.departamento}
                   className=" form__input--separate"
-                  required
+                  placeholder=" "
                 />
                 <label className="form__label">Departamento</label>
                 <ErrorMessage name="departamento" component={() => (
