@@ -10,14 +10,12 @@ function ModalMenu() {
     setIsOpen(false)
   }
   return (
-
     <div
       className={`modal__containerMenu ${isOpen ? 'isOpen' : ''}`}
       onClick={handleModal}
     >
       <p>El pedido no fue realizado aún</p>
     </div>
-
   )
 }
 

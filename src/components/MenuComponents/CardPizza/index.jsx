@@ -8,8 +8,12 @@ function CardPizza({ price, name, id, description, img, quantity, inCart }) {
 
   const { dispatch } = useContext(ReducerContext)
 
-  const addToCart = (id) => {
-    dispatch({ type: TYPES.ADD_TO_CART, payload: id })
+  const itemCart = (id) => {
+    if (inCart) {
+      dispatch({ type: TYPES.CLEAR_CART, payload: id })
+    } else {
+      dispatch({ type: TYPES.ADD_TO_CART, payload: id })
+    }
   }
 
   return (
@@ -23,8 +27,8 @@ function CardPizza({ price, name, id, description, img, quantity, inCart }) {
         <img className='item__image' loading='lazy' src={img} alt={name} />
       </div>
       <div className='item__buttons'>
-        <ButtonPlusMinus quantity={quantity} id={id} />
-        <button className={`item__buttons--right ${inCart ? 'inCart' : null} `} onClick={() => addToCart(id)}>{inCart ? 'Pedido' : 'Pedir'}</button>
+        <ButtonPlusMinus quantity={quantity} id={id} inCart={inCart} />
+        <button className={`item__buttons--right ${inCart ? 'inCart' : null} `} onClick={() => itemCart(id)}>{inCart ? 'Pedido' : 'Pedir'}</button>
       </div>
     </div>
   )
