@@ -72,8 +72,8 @@ function Menu() {
       <div className='tabs__menu'>
         <div><a href='#' className={toggleClass4} onClick={() => handleClass("#")}>Pizzas</a></div>
         <div><a href='#Empanadas' className={toggleClass1} onClick={() => handleClass('#Empanadas')}>Empanadas</a></div>
-        <div><a href='#Postres' className={toggleClass2} onClick={() => handleClass('#Postres')}>Postres</a></div>
         <div><a href='#Bebidas' className={toggleClass3} onClick={() => handleClass('#Bebidas')}>Bebidas</a></div>
+        <div><a href='#Postres' className={toggleClass2} onClick={() => handleClass('#Postres')}>Postres</a></div>
         <div className='iconContainer'>
           {state.cart.length === 0 ?
             <div className='tabs__cartIcon' onClick={handleVisibility}>

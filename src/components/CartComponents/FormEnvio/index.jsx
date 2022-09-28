@@ -194,15 +194,7 @@ function FormEnvio() {
                 <div className="container__subTotal">
                   <p className="text__order">Subtotal</p>
                   <p className="text__price">${totalCount}</p>
-                  <Field
-                    type="text"
-                    id="descuento"
-                    name="descuento"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    value={values.descuento}
-                    placeholder="Código de descuento"
-                  />
+                  
                 </div>
                 <div className="container__total">
                   <p className="text__modified">Total</p>
