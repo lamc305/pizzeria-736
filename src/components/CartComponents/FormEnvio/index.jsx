@@ -57,7 +57,7 @@ function FormEnvio() {
           const message =
             `Hola, estoy interesado en los siguientes productos:
           Productos: ${cartProducts}`
-          setTimeout(() => UseWhatsapp('55454545454545', message), 1500
+          setTimeout(() => UseWhatsapp('+5491132323293', message), 1500
           )
         }}
 
@@ -194,7 +194,7 @@ function FormEnvio() {
                 <div className="container__subTotal">
                   <p className="text__order">Subtotal</p>
                   <p className="text__price">${totalCount}</p>
-                  
+
                 </div>
                 <div className="container__total">
                   <p className="text__modified">Total</p>
