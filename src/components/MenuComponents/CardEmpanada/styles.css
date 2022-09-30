@@ -29,6 +29,7 @@
   font-size: 1.4rem;
   font-family: Roboto;
   font-weight: 400;
+  height: 20px;
   margin-top: 5px;
   margin-bottom: 7px;
   line-height: 16.41px;
@@ -90,6 +91,7 @@
 @media screen and (max-width:560px) {
   .item__header h2 {
     font-size: 2rem;
+    padding-top: 1rem;
   }
 
   .item__header h3 {
@@ -98,8 +100,9 @@
 
   .item__image {
     max-width: 250px;
-    width: 100%;
     min-width: 200px;
+    padding-top: 2rem;
+    width: 100%;
   }
 
   .item {
