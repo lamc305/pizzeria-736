@@ -1,14 +1,14 @@
 import CardBebida from "../../MenuComponents/CardBebida"
 import './listOfItems.css'
 
-function ListOfBebidas({ state, name, referencia }) {
+function ListOfBebidas({ state, name, referencia, scroll }) {
 
   return (
     <>
       {state.length !== 0 && <div className="ListOfItems__container"  >
         {state && state.length !== 0 && <>
 
-          <div className="ListOfItems__header">
+          <div ref={scroll} className="ListOfItems__header">
             <h2 ref={referencia} id={name}>{name}</h2>
             <div></div>
           </div>

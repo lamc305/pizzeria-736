@@ -2,47 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
-.header__menu {
-  display: flex;
-  width: 90vw;
-  max-width: 1440px;
-  margin: 60px auto;
-  height: 200px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__menu div h1 {
-  font-size: 9rem;
-  color: #E74423;
-  font-weight: bold;
-  margin-bottom: 0;
-  margin-top: 20px;
-  font-family: Jost;
-}
-
-.header__menu div p {
-  font-size: 2rem;
-  font-family: Roboto;
-  font-weight: 400;
-  margin-top: 0;
-  line-height: 23px;
-  color: #2B303A;
-}
-
-.header__menu div p:last-child {
-  margin-top: 0;
-}
-
-.header__menu img {
-  max-width: 175px;
-  object-fit: contain;
-}
-
 .tabs__cartIcon {
   color: #E74423;
   font-size: 4rem;
   display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
 .iconContainer {
@@ -68,9 +35,9 @@ html {
   font-weight: 400;
 }
 
-a {
-  text-decoration: none;
+p {
   color: #2B303A;
+  margin: 0;
 }
 
 .tabs__menu--active {
@@ -95,23 +62,6 @@ a {
 
 @media screen and (max-width: 950px) {
 
-  .header__menu {
-    height: 150px;
-    margin-top: 50px;
-  }
-
-  .header__menu div h1 {
-    font-size: 6rem;
-  }
-
-  .header__menu div p {
-    font-size: 1.7rem;
-  }
-
-  .header__menu img {
-    max-width: 140px;
-  }
-
   .tabs__menu {
     font-size: 3rem;
   }
@@ -127,22 +77,6 @@ a {
 
 @media screen and (max-width: 822px) {
 
-  .header__menu {
-    height: 150px;
-    margin-top: 40px;
-  }
-
-  .header__menu div h1 {
-    font-size: 5rem;
-  }
-
-  .header__menu div p {
-    font-size: 1.5rem;
-  }
-
-  .header__menu img {
-    max-width: 125px;
-  }
 
   .tabs__menu {
     padding-top: 15px;
@@ -164,33 +98,8 @@ a {
   }
 }
 
-@media screen and (max-width: 560px) {
-
-  .header__menu {
-    height: 120px;
-    margin-top: 30px;
-  }
-
-  .header__menu div h1 {
-    font-size: 4rem;
-  }
-
-  .header__menu div p {
-    font-size: 1.4rem;
-    max-width: 250px;
-  }
-
-  .header__menu img {
-    max-width: 100px;
-  }
-
-}
 
 @media screen and (max-width: 395px) {
-  .header__menu {
-    height: 100px;
-    margin-top: 25px;
-  }
 
   .tabs__menu {
     font-size: 1.5rem;
@@ -208,17 +117,9 @@ a {
     font-size: 3rem;
   }
 
-  .header__menu img {
-    max-width: 80px;
-  }
-
 }
 
 @media screen and (max-width:320px) {
-  .header__menu {
-    height: 70px;
-    margin-top: 10px;
-  }
 
   .tabs__menu {
     font-size: 1.2rem;
@@ -232,16 +133,4 @@ a {
     font-size: 1.2rem;
   }
 
-  .header__menu div h1 {
-    font-size: 2.5rem;
-  }
-
-  .header__menu div p {
-    font-size: 1rem;
-    max-width: 150px;
-  }
-
-  .header__menu img {
-    max-width: 60px;
-  }
 }

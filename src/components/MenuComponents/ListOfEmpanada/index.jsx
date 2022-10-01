@@ -1,15 +1,15 @@
 import CardEmpanada from "../../MenuComponents/CardBebida"
 import '../ListOfBebidas/listOfItems.css'
 
-function ListOfEmpanadas({ state, name, referencia }) {
+function ListOfEmpanadas({ state, name, referencia, scroll }) {
 
   return (
     <>
       {state && <div className="ListOfItems__container">
         {state && <>
           {name &&
-            <div className="ListOfItems__header">
-            <h2  ref={referencia} id={name}>{name}</h2>
+            <div ref={scroll} className="ListOfItems__header">
+              <h2 ref={referencia} id={name}>{name}</h2>
               <div></div>
             </div>
           }
