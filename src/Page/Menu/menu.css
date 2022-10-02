@@ -93,11 +93,38 @@ p {
 
   .producto {
     width: 100%;
-    grid-template-columns: repeat(auto-fit, 360px);
+    margin-left: 15px;
     justify-content: center;
   }
 }
 
+@media screen and (max-width: 760px) {
+  .producto {
+    grid-template-columns: repeat(auto-fit, 360px);
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .header__menu {
+    height: 120px;
+    margin-top: 30px;
+  }
+
+  .header__menu div h1 {
+    font-size: 4rem;
+  }
+
+  .header__menu div p {
+    font-size: 1.4rem;
+    max-width: 250px;
+  }
+
+  .header__menu img {
+    max-width: 100px;
+  }
+
+}
 
 @media screen and (max-width: 395px) {
 
