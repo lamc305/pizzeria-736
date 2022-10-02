@@ -168,7 +168,7 @@
 .container__subTotal {
     display: grid;
     border-bottom: 2px solid #9dbbdf;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 .text__order {
@@ -185,6 +185,7 @@
 
 .container__total {
     display: grid;
+    padding: 15px 0;
 }
 
 .text__modified {
@@ -383,7 +384,7 @@
 
     .container__pay {
         position: relative;
-        bottom: 542px;
+        bottom: 515px;
     }
 
     .text__modified,
@@ -407,6 +408,10 @@
     .text__modified2 {
         text-align: start;
         font-size: 20px;
+    }
+
+    .container__orderFinish {
+        padding-top: 30px;
     }
 }
 
