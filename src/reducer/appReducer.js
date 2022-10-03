@@ -1,8 +1,8 @@
 import { TYPES } from "../action/actionReducer"
-
+import jsonProducts from '../donremolo.json'
 export const initialStateApp = {
-  isLoading: true,
-  products: null,
+  isLoading: false,
+  products: jsonProducts,
   cart: []
 }
 

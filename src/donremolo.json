@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Super Napolitana",
+    "description": "Muzzarella, salsa de tomate, jamón, morrón, cherry, ajo y champignon.",
+    "price": 550,
+    "img": "https://media.discordapp.net/attachments/1013968997328355429/1016884399884734535/Mask_group.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 2,
+    "name": "Carne Picante",
+    "description": "Muzzarella, salsa de tomate, jamón, morrón, cherry, ajo y champignon.",
+    "price": 130,
+    "img": "https://media.discordapp.net/attachments/1013968997328355429/1017235896044617789/Ellipse_1_3.png",
+    "isAvailable": true,
+    "category": "Empanadas"
+  },
+  {
+    "id": 3,
+    "name": "Heineken",
+    "description": "Porrón 330cc..",
+    "price": 150,
+    "img": "https://cdn.discordapp.com/attachments/1013968997328355429/1017235897923682354/Ellipse_1_4.png",
+    "isAvailable": true,
+    "category": "Bebidas"
+  },
+  {
+    "id": 41,
+    "name": "Coca Cola",
+    "description": "Bebida Refrescante",
+    "price": 55,
+    "img": "https://media.discordapp.net/attachments/1013968997328355429/1017235897617481818/Ellipse_1_5.png",
+    "isAvailable": true,
+    "category": "Bebidas"
+  },
+  {
+    "id": 48,
+    "name": "Rúcula",
+    "description": "Muzzarella, salsa de tomate y rúcula.",
+    "price": 1500,
+    "img": "https://media.discordapp.net/attachments/1013968908992135250/1026498655169032312/rucula.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 49,
+    "name": "Almendrado",
+    "description": "Postre helado",
+    "price": 130,
+    "img": "https://media.discordapp.net/attachments/1013968908992135250/1026498600638873680/almendrado.png",
+    "isAvailable": true,
+    "category": "Postres"
+  }
+]
