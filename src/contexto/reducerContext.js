@@ -9,8 +9,8 @@ export const ReducerContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialStateApp)
 
   useEffect(() => {
-    localStorage.setItem('stateProductsPizza', JSON.stringify(state.products))
-    localStorage.setItem('stateCartPizza', JSON.stringify(state.cart))
+    sessionStorage.setItem('stateProductsPizza', JSON.stringify(state.products))
+    sessionStorage.setItem('stateCartPizza', JSON.stringify(state.cart))
   }, [state])
 
   const pizza = state.products && state.products.filter(res => res.category === 'Pizzas')

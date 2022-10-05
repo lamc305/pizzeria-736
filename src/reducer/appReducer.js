@@ -3,8 +3,8 @@ import jsonProducts from '../donremolo.json'
 
 export const initialStateApp = {
   isLoading: false,
-  products: JSON.parse(localStorage.getItem('stateProductsPizza')) || jsonProducts,
-  cart: JSON.parse(localStorage.getItem('stateCartPizza')) || []
+  products: JSON.parse(sessionStorage.getItem('stateProductsPizza')) || jsonProducts,
+  cart: JSON.parse(sessionStorage.getItem('stateCartPizza')) || []
 }
 
 export const appReducer = (state, action) => {

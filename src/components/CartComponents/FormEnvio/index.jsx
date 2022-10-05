@@ -51,7 +51,7 @@ function FormEnvio() {
         onSubmit={(valores) => {
           setIsOpen('is_open')
           const cartProducts = cart.map(({ name, price, quantity }) => {
-            const text = `${name} x ${quantity} = $${price * quantity}`
+            const text = ` ${name} x ${quantity} = $${price * quantity}`
             return text
           })
           const message = `Hola, estoy interesado en los siguientes productos:
