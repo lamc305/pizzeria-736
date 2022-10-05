@@ -1,9 +1,9 @@
 import { TYPES } from "../action/actionReducer"
-
+import jsonProducts from '../donremolo.json'
 export const initialStateApp = {
-  isLoading: true,
-  products: JSON.parse(localStorage.getItem('stateProductsPizza')) || null,
-  cart: JSON.parse(localStorage.getItem('stateCartPizza')) || [],
+  isLoading: false,
+  products: jsonProducts,
+  cart: []
 }
 
 export const appReducer = (state, action) => {
