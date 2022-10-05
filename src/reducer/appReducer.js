@@ -2,8 +2,8 @@ import { TYPES } from "../action/actionReducer"
 
 export const initialStateApp = {
   isLoading: true,
-  products: null,
-  cart: []
+  products: JSON.parse(localStorage.getItem('stateProductsPizza')) || null,
+  cart: JSON.parse(localStorage.getItem('stateCartPizza')) || [],
 }
 
 export const appReducer = (state, action) => {
@@ -18,6 +18,7 @@ export const appReducer = (state, action) => {
         ...state
       }
     case TYPES.ADD_ONE: {
+
       let item = state.products.find(
         (product) => product.id === action.payload);
       let newItem = state.products.find(product => product.quantity >= item.quantity)
@@ -120,6 +121,12 @@ export const appReducer = (state, action) => {
         )),
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
+    }
+    case TYPES.OFF__LOADER: {
+      return {
+        ...state,
+        isLoading: false
+      }
     }
     default:
       return state

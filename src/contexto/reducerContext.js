@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useReducer } from "react";
 import { appReducer, initialStateApp } from "../reducer/appReducer";
 
@@ -6,6 +7,11 @@ export const ReducerContext = createContext()
 export const ReducerContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(appReducer, initialStateApp)
+
+  useEffect(() => {
+    localStorage.setItem('stateProductsPizza', JSON.stringify(state.products))
+    localStorage.setItem('stateCartPizza', JSON.stringify(state.cart))
+  }, [state])
 
   const pizza = state.products && state.products.filter(res => res.category === 'Pizzas')
   const bebida = state.products && state.products.filter(res => res.category === 'Bebidas')

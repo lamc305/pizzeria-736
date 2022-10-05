@@ -11,12 +11,12 @@ import AllMenu from '../../components/MenuComponents/AllMenu';
 import { ScrollContextProviver } from '../../contexto/scrollSpyContext';
 function Menu() {
 
-  const { dispatch } = useContext(ReducerContext)
-
-
+  const { dispatch, state } = useContext(ReducerContext)
 
   useEffect(() => {
+    state.products !== null ? dispatch({ type: TYPES.OFF__LOADER }) :
       getProducts().then(res => dispatch({ type: TYPES.CALL_API, payload: res }))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch])
 
   return (
