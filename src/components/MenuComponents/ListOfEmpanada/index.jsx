@@ -9,7 +9,7 @@ function ListOfEmpanadas({ state, name, referencia, scroll }) {
         {state && <>
           {name &&
             <div ref={scroll} className="ListOfItems__header">
-              <h2 ref={referencia} id={name}>{name}</h2>
+              <h2 ref={referencia} id={name}>{name}  ({state.length})</h2>
               <div></div>
             </div>
           }

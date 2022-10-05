@@ -63,7 +63,7 @@ function Tabs() {
             <CartIcon />
           </div> :
           <Link to='/cart' className='tabs__cartIcon'>
-            <span>{state.cart.length > 0 ? state.cart.length : null}</span>
+            <span>{state.cart.length > 0 ? state.cart.map(res => res.quantity).reduce((acc, sum) => acc + sum, 0) : null}</span>
             <CartIcon />
           </Link>}
       </div>

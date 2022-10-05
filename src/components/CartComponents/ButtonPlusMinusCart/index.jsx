@@ -2,7 +2,9 @@ import { useContext } from "react"
 import { HiMinus, HiPlus } from "react-icons/hi"
 import { TYPES } from "../../../action/actionReducer"
 import { ReducerContext } from "../../../contexto/reducerContext"
+import '../../MenuComponents/ButtonPlusMinus/styles.css'
 function ButtonPlusMinusCart({ id, quantity }) {
+
   const { dispatch } = useContext(ReducerContext)
 
   const handlePlus = (id) => {
