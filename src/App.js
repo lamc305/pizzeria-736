@@ -1,11 +1,19 @@
-import Menu from "./Page/Menu/Menu";
-import './app.css'
+import React from "react";
+import "./App.css";
+import { HashRouter } from "react-router-dom";
+import { ReducerContextProvider } from "./contexto/reducerContext";
+import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
+import ModalContextProvider from "./contexto/modalContext";
 
 function App() {
   return (
-    <div className="App">
-      <Menu />
-    </div>
+    <HashRouter>
+      <ReducerContextProvider>
+        <ModalContextProvider>
+          <AnimatedRoutes />
+        </ModalContextProvider>
+      </ReducerContextProvider>
+    </HashRouter>
   );
 }
 

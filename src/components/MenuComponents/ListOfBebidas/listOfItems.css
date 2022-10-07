@@ -1,0 +1,32 @@
+.ListOfItems__header {
+  width: 90vw;
+  max-width: 1440px;
+  margin: 0 auto
+}
+
+.ListOfItems__header h2 {
+  color: #E74423;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Jost;
+  font-weight: 700;
+}
+
+.ListOfItems__header div {
+  width: 90vw;
+  max-width: 1440px;
+  margin-top: 5px;
+  border: 1px solid #A4BFDF;
+}
+
+@media screen and (max-width: 460px) {
+  .ListOfItems__header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .ListOfItems__header h2 {
+    font-size: 2.1rem;
+  }
+}

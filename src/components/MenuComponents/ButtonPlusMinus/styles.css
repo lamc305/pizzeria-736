@@ -1,0 +1,37 @@
+.item__buttons--left {
+  background-color: #A4BFDF;
+  border: 1px solid #A4BFDF;
+  border-radius: 10px;
+  height: 28px;
+  width: 28px;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items___buttonsLeft {
+  display: flex;
+  align-items: center;
+}
+
+.item__buttons--center {
+  margin: 0 4px 0 4px;
+  width: auto;
+  font-size: 1.8rem;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(164, 191, 223, 0.5);
+  border-radius: 10px;
+  color: #2B303A;
+}
+
+@media screen and (max-width:425px) {
+  .item__buttons--left {
+    height: 23px;
+    width: 23px;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,14 @@
+.cart__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 45px;
+  width: 90vw;
+  max-width: 1440px;
+  margin: 30px auto 0 auto;
+}
+
+.cart__headerLogo {
+  width: 100%;
+  max-width: 87px;
+  object-fit: contain;
+}
