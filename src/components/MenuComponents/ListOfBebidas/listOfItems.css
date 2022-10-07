@@ -1,7 +1,3 @@
-.ListOfItems__container {
-  min-height: 100vh;
-}
-
 .ListOfItems__header {
   width: 90vw;
   max-width: 1440px;

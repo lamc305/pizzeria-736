@@ -51,12 +51,13 @@ function FormEnvio() {
         onSubmit={(valores) => {
           setIsOpen('is_open')
           const cartProducts = cart.map(({ name, price, quantity }) => {
-            const text = `${name} x ${quantity} = $${price * quantity}`
+            const text = ` ${name} x ${quantity} = $${price * quantity}`
             return text
           })
-          const message =
-            `Hola, estoy interesado en los siguientes productos:
-          Productos: ${cartProducts}`
+          const message = `Hola, estoy interesado en los siguientes productos:
+          ${cartProducts}
+          Esta es mi dirección: calle ${valores.calle}, departamento ${valores.departamento}, código postal ${valores.codigoPostal} ${valores.numero && `, número ${valores.numero}`} ${valores.piso && `, piso ${valores.piso}`}  ${valores.celular && `, de igual forma me pueden contactar por este número: ${valores.celular}`} ${valores.texto && `y también quiero que ${valores.texto}`}
+          `
           setTimeout(() => UseWhatsapp('+5491132323293', message), 1500
           )
         }}

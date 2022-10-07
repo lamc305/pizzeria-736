@@ -1,9 +1,10 @@
 import { TYPES } from "../action/actionReducer"
 import jsonProducts from '../donremolo.json'
+
 export const initialStateApp = {
   isLoading: false,
-  products: jsonProducts,
-  cart: []
+  products: JSON.parse(sessionStorage.getItem('stateProductsPizza')) || jsonProducts,
+  cart: JSON.parse(sessionStorage.getItem('stateCartPizza')) || []
 }
 
 export const appReducer = (state, action) => {
@@ -18,6 +19,7 @@ export const appReducer = (state, action) => {
         ...state
       }
     case TYPES.ADD_ONE: {
+
       let item = state.products.find(
         (product) => product.id === action.payload);
       let newItem = state.products.find(product => product.quantity >= item.quantity)
@@ -120,6 +122,12 @@ export const appReducer = (state, action) => {
         )),
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
+    }
+    case TYPES.OFF__LOADER: {
+      return {
+        ...state,
+        isLoading: false
+      }
     }
     default:
       return state

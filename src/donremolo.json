@@ -3,8 +3,17 @@
     "id": 1,
     "name": "Super Napolitana",
     "description": "Muzzarella, salsa de tomate, jamón, morrón, cherry, ajo y champignon.",
-    "price": 550,
-    "img": "https://media.discordapp.net/attachments/1013968997328355429/1016884399884734535/Mask_group.png",
+    "price": 1500,
+    "img": "https://lamc305.github.io/Photos-Pizza/superNapolitana1.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 12,
+    "name": "Margarita",
+    "description": "Muzzarella, salsa de tomate y albaca.",
+    "price": 1500,
+    "img": "https://lamc305.github.io/Photos-Pizza/margarita.png",
     "isAvailable": true,
     "category": "Pizzas"
   },
@@ -41,6 +50,33 @@
     "description": "Muzzarella, salsa de tomate y rúcula.",
     "price": 1500,
     "img": "https://media.discordapp.net/attachments/1013968908992135250/1026498655169032312/rucula.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 42,
+    "name": "Super Napolitana",
+    "description": "Muzzarella, salsa de tomate y rúculaMuzzarella, salsa de tomate y rúcula..",
+    "price": 1500,
+    "img": "https://lamc305.github.io/Photos-Pizza/superNapolitana2.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 65,
+    "name": "Cebolla Picante",
+    "description": "Muzzarella, cebolla y ají.",
+    "price": 1500,
+    "img": "https://lamc305.github.io/Photos-Pizza/pizza3.png",
+    "isAvailable": true,
+    "category": "Pizzas"
+  },
+  {
+    "id": 66,
+    "name": "Anchoas",
+    "description": "Muzzarella, salsa de tomate, anchoas y tomate fresco.",
+    "price": 1500,
+    "img": "https://lamc305.github.io/Photos-Pizza/anchoas.png",
     "isAvailable": true,
     "category": "Pizzas"
   },
