@@ -27,7 +27,7 @@ function CardEmpanada({ description, name, id, price, image, quantity, inCart })
       </div>
       <div className='item__buttons'>
         <ButtonPlusMinus quantity={quantity} id={id} inCart={inCart} />
-        <button className={`item__buttons--right ${inCart ? 'inCart' : null} `} onClick={() => itemCart(id)}>{inCart ? 'Pedido' : 'Pedir'}</button>
+        <button className={`item__buttons--right ${inCart ? 'inCart' : null} `} onClick={() => itemCart(id)}>{inCart ? 'Cancelar' : 'Pedir'}</button>
       </div>
     </div >
   )
