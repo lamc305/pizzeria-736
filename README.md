@@ -1,6 +1,6 @@
 # PROYECTO: PIZZERÍA DON REMOLO
 
-Esta es una solución para el proyecto de la [idea #3](https://idforideas.com/) de Id for Ideas.
+Esta es una solución para el proyecto de la idea #3 de [Id for Ideas]((https://idforideas.com/)).
 
 ## Overview
 
