@@ -51,13 +51,21 @@ p {
   display: grid;
   width: 90vw;
   max-width: 1280px;
-  grid-template-columns: repeat(auto-fit, 360px);
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: auto;
   gap: 27px;
   margin: 0 auto;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  place-content: center;
+}
+
+
+@media screen and (max-width: 1220px) {
+  .producto {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -76,8 +84,6 @@ p {
 }
 
 @media screen and (max-width: 822px) {
-
-
   .tabs__menu {
     padding-top: 15px;
     font-size: 2rem;
@@ -90,22 +96,18 @@ p {
   .tabs__menu--active {
     font-size: 2rem;
   }
-
-
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 780px) {
   .producto {
-    grid-template-columns: repeat(auto-fit, 360px);
+    grid-template-columns: 1fr;
     width: 100%;
     margin-left: 15px;
     justify-content: center;
-
   }
 }
 
 @media screen and (max-width: 560px) {
-
   .header__menu {
     height: 120px;
     margin-top: 30px;
@@ -123,12 +125,9 @@ p {
   .header__menu img {
     max-width: 100px;
   }
-
-
 }
 
 @media screen and (max-width: 395px) {
-
   .tabs__menu {
     font-size: 1.5rem;
   }
@@ -148,11 +147,9 @@ p {
   .producto {
     margin-left: auto;
   }
-
 }
 
 @media screen and (max-width:320px) {
-
   .tabs__menu {
     font-size: 1.2rem;
   }
@@ -164,5 +161,4 @@ p {
   .tabs__cartIcon {
     font-size: 1.2rem;
   }
-
 }
