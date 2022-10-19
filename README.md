@@ -28,10 +28,10 @@ que es sólo en efectivo y con delivery propio del negocio.
 
 ### Screenshot
 
-![Home](./photos/home.png)
+![Home](./photos/home.webp)
 
 
-![Cart](./photos/cart.png)
+![Cart](./photos/cart.webp)
 
 ### Links
 
